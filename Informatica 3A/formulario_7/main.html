@@ -5,14 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+<style>
+    body{
+        background-color: #3aafa9;
+        color: #def2f1;
+    }
+
+    input[type=submit]{
+        background-color: #2b7a78;
+        color: white;
+    }
+
+    h1{
+        background-color:white ;
+        color: #17252A;
+        width: 600px;
+    }
+
+    h2{
+        background-color: #def2f1;
+        color: #2b7a78;
+        width: 600px;
+    }
+
+    td{
+        padding-right: 1rem;
+    }
+</style>
 </head>
 <body>
     <form action="main.php" method="post">
+        <h1>SISTEMA CALCULO DEL SALARIO</h1>
+        <h2>INGRESE SUS DATOS</h2>
         <table>
             <tr>
                 <td>
                     <label for="nombre">Nombre: </label><br>
-                    <input type="text" id="nombre" name="nombre">
+                    <input type="text" id="nombre" name="nombre" required>
                 </td> 
                 <td>
                     <label for="pIPS">%IPS: </label><br>
@@ -23,7 +52,7 @@
             <tr>
                 <td>
                     <label for="apellido">Apellido: </label><br>
-                    <input type="text" id="apellido" name="apellido">
+                    <input type="text" id="apellido" name="apellido" required>
                 </td>
                 <td>
                     <label for="pASO">%ASO: </label><br>
@@ -33,17 +62,17 @@
             <tr>
                 <td>
                     <label for="monto">Monto por hora: </label><br>
-                    <input type="number" id="monto" name="monto">
+                    <input type="number" id="monto" name="monto" min="20000" max="100000">
                 </td>
                 <td>
                     <label for="hijos">Cantidad de hijos: </label><br>
-                    <input type="number" id="hijos" name="hijos">
+                    <input type="number" id="hijos" name="hijos" min="0">
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="horas">Horas Trabajadas: </label><br>
-                    <input type="number" id="horas" name="horas">
+                    <input type="number" id="horas" name="horas" min="20" max="50">
                 </td>
                 <td>
                     <input type="submit" value="CALCULA">
