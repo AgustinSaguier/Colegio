@@ -1,0 +1,58 @@
+----------Alumno/a: Almirón Ivanna--------------
+Su promedio es de 3.5
+----------Alumno/a: Amat y Leon Bruno--------------
+Su promedio es de 3.0
+----------Alumno/a: Avalos Mariana--------------
+Su promedio es de 3.5
+----------Alumno/a: Baez Santiago--------------
+Su promedio es de 3.5
+----------Alumno/a: Capello Sofia--------------
+Su promedio es de 3.6666666666666665
+----------Alumno/a: Cardenas Alejandra--------------
+Su promedio es de 3.6666666666666665
+----------Alumno/a: Choi Min--------------
+Su promedio es de 4.0
+----------Alumno/a: Estebanez Juan Pablo--------------
+Su promedio es de 3.1666666666666665
+----------Alumno/a: Farina Alessandro--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Flecha Facundo--------------
+Su promedio es de 4.0
+----------Alumno/a: Gernhofer Carlos--------------
+Su promedio es de 4.0
+----------Alumno/a: Giménez Cristhian--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Gonzalez Lia--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Leiva Walter--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Llamosas Jorge Sebastian--------------
+Su promedio es de 4.166666666666667
+----------Alumno/a: Maehara Ryuto--------------
+Su promedio es de 3.5
+----------Alumno/a: Núñez Camila--------------
+Su promedio es de 3.3333333333333335
+----------Alumno/a: Ortiz Antonella--------------
+Su promedio es de 3.1666666666666665
+----------Alumno/a: Páez Matias--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Prendecki Gastón--------------
+Su promedio es de 3.3333333333333335
+----------Alumno/a: Ramirez Mia--------------
+Su promedio es de 3.3333333333333335
+----------Alumno/a: Rocholl Julieta--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Rodriguez Pedro--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Romero Cecilia--------------
+Su promedio es de 3.8333333333333335
+----------Alumno/a: Sacco Bruno--------------
+Su promedio es de 4.0
+----------Alumno/a: Saguier Agustin--------------
+Su promedio es de 3.6666666666666665
+----------Alumno/a: Samaniego Guillermo--------------
+Su promedio es de 3.6666666666666665
+----------Alumno/a: Teme Micaela--------------
+Su promedio es de 3.5
+----------Alumno/a: Yakisich Keyla--------------
+Su promedio es de 3.1666666666666665

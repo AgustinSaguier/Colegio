@@ -1,0 +1,58 @@
+Apellidos,Nombre,Matematica,Fisica,Quimica,Algoritmia,Language,EducFisica
+Almirón Ivanna,3,2,4,5,4,3
+
+Amat y Leon Bruno,5,4,3,2,2,2
+
+Avalos Mariana,4,3,3,4,2,5
+
+Baez Santiago,5,4,2,2,3,5
+
+Capello Sofia,4,3,4,5,2,4
+
+Cardenas Alejandra,3,4,3,2,5,5
+
+Choi Min,5,4,4,3,3,5
+
+Estebanez Juan Pablo,5,4,3,3,2,2
+
+Farina Alessandro,3,4,4,4,3,5
+
+Flecha Facundo,4,3,3,4,5,5
+
+Gernhofer Carlos,4,4,3,4,4,5
+
+Giménez Cristhian,5,5,3,4,3,3
+
+Gonzalez Lia,5,4,3,3,4,4
+
+Leiva Walter,5,4,4,5,3,2
+
+Llamosas Jorge Sebastian,5,4,3,4,5,4
+
+Maehara Ryuto,4,3,3,4,2,5
+
+Núñez Camila,5,4,4,2,3,2
+
+Ortiz Antonella,4,3,4,3,3,2
+
+Páez Matias,5,5,4,3,4,2
+
+Prendecki Gastón,2,3,2,3,5,5
+
+Ramirez Mia,4,2,3,2,4,5
+
+Rocholl Julieta,5,4,3,4,4,3
+
+Rodriguez Pedro,3,4,3,4,4,5
+
+Romero Cecilia,4,3,3,4,5,4
+
+Sacco Bruno,4,4,3,4,4,5
+
+Saguier Agustin,5,3,2,3,4,5
+
+Samaniego Guillermo,4,5,4,4,3,2
+
+Teme Micaela,3,4,3,4,5,2
+
+Yakisich Keyla,3,4,4,3,2,3
