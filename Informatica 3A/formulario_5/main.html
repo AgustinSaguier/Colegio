@@ -6,88 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
+    body{
+        background-color: hsl(226, 100%, 90%);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     table{
         text-align:left;
+    }
+
+    td{
+        padding-right: 1rem;
+    }
+
+    h1{
+        text-align: center;
     }
 
 </style>
 </head>
 <body>
-<form action="main.php" method="post">
+<h1>Datos Personales 5 (Formulario)</h1>
+<p>Escriba los siguientes datos:</p>
+<form action="main.php" method="post, get">
     <table class="center">
     <tr>
-        <td><label for="name">Name</label><br>
+        <td><label for="name"><strong>Nombre: </strong></label><br>
         <input type="text" id="name" name="name"></td>
 
-        <td><label for="lastname">Last name</label><br>
+        <td><label for="lastname"><strong>Apellido: </strong></label><br>
         <input type="text" id="lastname" name="lastname"></td>
 
-        <td><label for="edad">Edad</label><br>
+        <td><label for="edad"><strong>Edad:</strong></label><br>
             <select name="edad">
             <option value="empty">...</option>
-            <option value="Menos20">Menos de 20 años</option>
-            <option value="Ent1">Entre 20 y 39 años</option>
-            <option value="Ent2">Entre 40 y 59 años</option>
-            <option value="Mayor">Mayor de 60 años</option>
+            <option value="Menos de 20 años">Menos de 20 años</option>
+            <option value="Entre 20 y 39 años">Entre 20 y 39 años</option>
+            <option value="Entre 40 y 59 años">Entre 40 y 59 años</option>
+            <option value="Mayor de 60 años">Mayor de 60 años</option>
         </select></td>
 
       </tr>
       <tr>
-        <td><label for="peso">Peso</label><br>
+        <td><label for="peso"><strong>Peso</strong></label><br>
         <input type="number" id="peso" name="peso"> kg</td>
 
-        <td><form id="sexo"><label for="sexo">Sexo</label><br> 
-            <input type="radio" id="hombre" name="sexo" value="h">
+        <td><form id="sexo"><label for="sexo"><strong>Sexo</strong></label><br> 
+            <input type="radio" id="hombre" name="sexo" value="hombre">
             <label for="hombre">hombre</label>
-            <input type="radio" id="mujer" name="sexo" value="m">
+            <input type="radio" id="mujer" name="sexo" value="mujer">
             <label for="hombre">mujer</label>
             </form>
             </td>
 
-            <td><form id="estado"><label for="estado">Estado Civil</label><br> 
-                <input type="radio" id="soltero" name="estado" value="s">
-                <label for="solter">Soltero</label>
-                <input type="radio" id="casado" name="estado" value="c">
-                <label for="casado">Casado</label>
-                <input type="radio" id="otro" name="estado" value="o">
-                <label for="otro">Otro</label>
-                </form>
-                </td>
+        <td><label for="estado"><strong>Estado Civil</strong></label><br> 
+            <input type="radio" id="soltero" name="estado" value="soltero">
+            <label for="solter">Soltero</label>
+            <input type="radio" id="casado" name="estado" value="casado">
+            <label for="casado">Casado</label>
+            <input type="radio" id="otro" name="estado" value="otro">
+            <label for="otro">Otro</label>
+            </td>
       </tr>
     </table>
     <table id="left">
         <tr>
-            <td rowspan="2">Aficiones</td>
+            <td rowspan="2"><strong>Aficiones</strong></td>
             <td>
+                <input type="checkbox" name="aficiones[]" value="cine">
                 <label for="cine">Cine</label>
-                <input type="checkbox" name="cine">
             </td>
             <td>
+                <input type="checkbox" name="aficiones[]" value="literatura">
                 <label for="literatura">Literatura</label>
-                <input type="checkbox" name="literatura">
             </td>
             <td>
+                <input type="checkbox" name="aficiones[]" value="tebeos">
                 <label for="tebeos">Tebeos</label>
-                <input type="checkbox" name="tebeos">
             </td>
         </tr>
         <tr>
             <td>
+                <input type="checkbox" name="aficiones[]" value="deporte">
                 <label for="deporte">Deporte</label>
-                <input type="checkbox" name="deporte">
             </td>
             <td>
+                <input type="checkbox" name="aficiones[]" value="musica">
                 <label for="musica">Musica</label>
-                <input type="checkbox" name="musica">
             </td>
             <td>
+                <input type="checkbox" name="aficiones[]" value="television">
                 <label for="television">Television</label>
-                <input type="checkbox" name="television">
             </td>
         </tr>
     </table>
+    <br>
     <input type="submit" value="Enviar">
     <input type="reset" value="Borrar">
+    <hr>
 </form>
 </body>
 </html>
