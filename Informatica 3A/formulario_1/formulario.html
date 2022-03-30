@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Vbucks</title>
+    <style>
+        body {
+          background-image: url(fortnite.jpg);
+        }
+        </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Generador de Vbucks **GRATIS**</h1>
+    <table>
+        <tr>
+            <td>
+                <form>
+                    <!--Nombre-->
+                    <label for="fname">Nombre completo:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <!--Sexp-->
+                    <h8>Sexo</h8><br>
+                    <input type="radio" id="html" name="sexo" value="H">
+                    <label for="html">Hombre</label><br>
+                    <input type="radio" id="css" name="sexo" value="M">
+                    <label for="css">Mujer</label><br>
+                    <!--Plataforma-->
+                    <h8>Plataforma donde juega</h8><br>
+                    <select name="plataforma">
+                        <option>PC</option>
+                        <option>Nintendo</option>
+                        <option>Xbox</option>
+                        <option>Ps4</option>
+                    </select><br>
+                    <!--Nombre de usuario-->
+                    <label for="fuser">Usuario de Fortnite:</label><br>
+                    <input type="text" id="fuser" name="fuser"><br>
+                    <!--Contraseña-->
+                    <label for="pwd">Contraseña:</label><br>
+                    <input type="password" id="pwd" name="pwd"><br>
+                    <!--Verificacion-->
+                    <label for="favcolor">Para verificar que no eres un robot seleccione el color verde:</label>
+                    <input type="color" id="favcolor" name="favcolor"><br>
+                    <!--Metodo de pago-->
+                    <h8>Metodo</h8><br>
+                    <input type="checkbox" id="opcion1" name="opcion1" value="Visa">
+                    <label for="opcion1"> Visa </label><br>
+                    <input type="checkbox" id="opcion2" name="opcion2" value="Mastercard">
+                    <label for="opcion2"> Mastercard</label><br>
+                    <input type="checkbox" id="opcion3" name="opcion3" value="American">
+                    <label for="opcion3"> American Express</label><br>
+                    <!--Numero tarjeta-->
+                    <label for="number">Numero de tarjeta de credito:</label>
+                    <input type="number" id="number" name="number"><br>
+                    <!--CVV-->
+                    <label for="number2">CVV:</label>
+                    <input type="number2" id="number2" name="number2"><br>
+                    <!--Fecha expiracion-->
+                    <label for="Expiracion">Fecha de Expiracion:</label>
+                    <input type="date" id="Expiracion" name="Expiracion"><br>
+                    <!--Cantidad de vbucks-->
+                    <label for="cant">Elija cuantos Vbucks queres (entre 0 y 1000000):</label>
+                    <input type="range" id="cant" name="cant" min="0" max="1000000"><br>
+                    <!--Hora de entrega-->
+                    <label for="del">Elija la hora para recibir los Vbucks:</label>
+                    <input type="time" id="del" name="del"><br>
+                    <!--Boton-->
+                    <input type="button" onclick="alert('Vbucks Generados!!!')" value="Generar Vbucks!!!">
+                </form>
+            </td>
+            <td>
+                <img src="vbucks.png" alt="vbuck" height="200px" width="300px"> 
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

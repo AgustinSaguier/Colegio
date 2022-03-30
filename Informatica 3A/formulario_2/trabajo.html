@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        .x{
+        background: #c9d681;
+        border-color: #eaeecf;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 2px;
+        }
+        body{
+            background-color: #b1c644;
+        }
+        .y{
+            border-radius: 20px;
+            color: rgb(3, 34, 3);
+        }
+        input[type=submit]{
+            border-radius: 20px;
+            background-color: rgb(3, 34, 3);
+        }
+    </style>
+</head>
+<body>
+    <form action="ind.php" method="post">
+        <!--Step 1-->
+        <h5>Step 1: Your Details</h5>
+        <div class="x"><label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="First and Last name"><br></div>
+        <div class="x"><label for="mail">Email</label>
+        <input type="text" id="mail" name="mail" placeholder="example@domain.com"><br></div>
+        <div class="x"><label for="phone">Phone</label>
+        <input type="number" id="phone" name="phone" placeholder="Eg. +0981401724"><br></div>
+        <!--Step 2-->
+        <h5>Step 2: Delivery address</h5>
+        <div class="x"><label for="address">Address</label>
+        <textarea name="address" rows="4" cols="20"></textarea><br></div>
+        <div class="x"><label for="post">Post code</label>
+        <input type="number" id="post" name="post"><br></div>
+        <div class="x"><label for="country">Country</label>
+        <input type="text" id="country" name="country"><br></div>
+        <!--Step 3-->
+        <h5>Card details</h5>
+        <div class="x"><h8>Card type</h8><br>
+            <input type="radio" id="visa" name="card" value="visa">
+            <label for="visa">Visa</label>
+            <input type="radio" id="Amex" name="card" value="Amex">
+            <label for="Amex">Amex</label>
+            <input type="radio" id="Mastercard" name="card" value="Mastercard">
+            <label for="Mastercard">Mastercard</label><br></div>
+        <div class="x"><label for="cNumber">Card Number</label>
+        <input type="number" id="cNumber" name="cNumber"><br></div>
+        <div class="x"><label for="sCode">Security Code</label>
+        <input type="number" id="sCode" name="sCode"><br></div>
+        <div class="x"><label for="nCard">Name on card</label>
+        <input type="text" id="nCard" name="nCard" placeholder="Exact name on the card"><br></div>
+        <!--Step 4-->
+        <div class="y"><input type="submit" value="Enviar"></div>
+      </form>
+</body>
+</html>

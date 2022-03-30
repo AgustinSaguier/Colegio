@@ -1,0 +1,8 @@
+pedro@sil.edu.py
+juan@sil.edu.py
+sofia@sil.edu.py
+juana@sil.edu.py
+carla@sil.edu.py
+perla sil.edu
+paco@sil.edu.py
+ruben@sil.edu.py

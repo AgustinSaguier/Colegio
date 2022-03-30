@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table{
+        text-align:left;
+    }
+
+</style>
+</head>
+<body>
+<form action="main.php" method="post">
+    <table class="center">
+    <tr>
+        <td><label for="name">Name</label><br>
+        <input type="text" id="name" name="name"></td>
+
+        <td><label for="lastname">Last name</label><br>
+        <input type="text" id="lastname" name="lastname"></td>
+
+        <td><label for="edad">Edad</label><br>
+            <select name="edad">
+            <option value="empty">...</option>
+            <option value="Menos20">Menos de 20 años</option>
+            <option value="Ent1">Entre 20 y 39 años</option>
+            <option value="Ent2">Entre 40 y 59 años</option>
+            <option value="Mayor">Mayor de 60 años</option>
+        </select></td>
+
+      </tr>
+      <tr>
+        <td><label for="peso">Peso</label><br>
+        <input type="number" id="peso" name="peso"> kg</td>
+
+        <td><form id="sexo"><label for="sexo">Sexo</label><br> 
+            <input type="radio" id="hombre" name="sexo" value="h">
+            <label for="hombre">hombre</label>
+            <input type="radio" id="mujer" name="sexo" value="m">
+            <label for="hombre">mujer</label>
+            </form>
+            </td>
+
+            <td><form id="estado"><label for="estado">Estado Civil</label><br> 
+                <input type="radio" id="soltero" name="estado" value="s">
+                <label for="solter">Soltero</label>
+                <input type="radio" id="casado" name="estado" value="c">
+                <label for="casado">Casado</label>
+                <input type="radio" id="otro" name="estado" value="o">
+                <label for="otro">Otro</label>
+                </form>
+                </td>
+      </tr>
+    </table>
+    <table id="left">
+        <tr>
+            <td rowspan="2">Aficiones</td>
+            <td>
+                <label for="cine">Cine</label>
+                <input type="checkbox" name="cine">
+            </td>
+            <td>
+                <label for="literatura">Literatura</label>
+                <input type="checkbox" name="literatura">
+            </td>
+            <td>
+                <label for="tebeos">Tebeos</label>
+                <input type="checkbox" name="tebeos">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="deporte">Deporte</label>
+                <input type="checkbox" name="deporte">
+            </td>
+            <td>
+                <label for="musica">Musica</label>
+                <input type="checkbox" name="musica">
+            </td>
+            <td>
+                <label for="television">Television</label>
+                <input type="checkbox" name="television">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+</form>
+</body>
+</html>
