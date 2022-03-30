@@ -17,28 +17,38 @@
         margin-top: 100px;
     }
 
+    .content{
+        text-align: center;
+
+    }
+
     input[type=text]{
-            background-color: white;
+            background-color: lightgray;
             border-color: white;
+            height: 40px;
         }
     input[type=password]{
-            background-color: white;
+            background-color: lightgray;
             border-color: white;
+            height: 40px;
         }
-    input[type=password]{
-            background-color: white;
-            border-color: white;
+    input[type=submit]{
+            background-color: #ff9615;
+            border-color: #ff9615;
+            height: 40px;
+            width: 180px;
         }
     span.gris{
-        color: gray;
+        color: lightgray;
     }
-    span.amarillo{
-        color: yellow;
+    span.yellow{
+        color: #ff9615;
     }
 </style>
 </head>
 <body>
     <div class="box">
+        <div class="content">
         <form action="login.php" method="post">
         <div class="input">
         <input type="text" id="name" name="name" placeholder="username"><br>
@@ -49,10 +59,11 @@
         </div>
         <br>
         <div class="login">
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Submit">
         <p><span class="gris">Already have an account?</span><span class="yellow">Register</span></p>   
         </div>
         </form>
+        </div>
     </div>
 </body>
 </html>

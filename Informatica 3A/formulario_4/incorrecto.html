@@ -7,6 +7,84 @@
     <title>Document</title>
 </head>
 <body>
-    <p>no funciona</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: #ff9615;
+    }
+    .box{
+        margin: auto;
+        width: 300px;
+        background-color: white;
+        padding: 50px;
+        margin-top: 100px;
+    }
+
+    .content{
+        text-align: center;
+
+    }
+
+    input[type=text]{
+            background-color: lightgray;
+            border-color: white;
+            height: 40px;
+        }
+    input[type=password]{
+            background-color: lightgray;
+            border-color: white;
+            height: 40px;
+        }
+    input[type=submit]{
+            background-color: #ff9615;
+            border-color: #ff9615;
+            height: 40px;
+            width: 180px;
+        }
+    span.gris{
+        color: lightgray;
+    }
+    span.yellow{
+        color: #ff9615;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+        <div class="input">
+        <input type="text" id="name" name="name" placeholder="Name"><br>
+        </div>
+        <br>
+        <div class="input">
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name"><br>
+        </div>
+        <br>
+        <div class="input">
+        <input type="text" id="mail" name="mail" placeholder="Mail"><br>
+        </div>
+        <br>
+        <div class="input">
+        <input type="text" id="user" name="user" placeholder="User"><br>
+        </div>
+        <br>
+        <div class="input">
+        <input type="password" id="pass" name="pass" placeholder="password"><br>
+        </div>
+        <br>
+        <div class="login">
+        <input type="submit" value="Submit">
+        <p><span class="gris">Already have an account?</span><span class="yellow">Register</span></p>   
+        </div>
+        </div>
+    </div>
+</body>
+</html>
 </body>
 </html>
