@@ -44,17 +44,24 @@
         $pIPS=$_REQUEST["pIPS"];
         $pASO=$_REQUEST["pASO"];
         $hijos=$_REQUEST["hijos"];
+            
+           
 
-        echo ("<h2>$nombre $apellido<h2>");
+        if(empty($_REQUEST["nombre"] and $_REQUEST["apellido"])){
+            echo("<p>Los datos de su nombre estan incompletos</p>");
+        }
+        else{
+            echo ("<h2>$nombre $apellido<h2>");
 
-        echo ("<h3>Salario:</h3>");
+            echo ("<h3>Salario:</h3>");
 
-        $salario_base=$monto*$horas;
-        $salario_ips=($salario_base*$pIPS)/100;
-        $salario_aso=($salario_base*$pASO)/100;
-        $salario_hijos=($salario_base*($hijos*3))/100;
-        $salario_final=($salario_base-$salario_ips-$salario_aso+$salario_hijos);
-        echo("<h4>$salario_final G<h4>")
+            $salario_base=$monto*$horas;
+            $salario_ips=($salario_base*$pIPS)/100;
+            $salario_aso=($salario_base*$pASO)/100;
+            $salario_hijos=($salario_base*($hijos*3))/100;
+            $salario_final=($salario_base-$salario_ips-$salario_aso+$salario_hijos);
+            echo("<h4>$salario_final <h4>");
+        }
     ?>
 </body>
 </html>
