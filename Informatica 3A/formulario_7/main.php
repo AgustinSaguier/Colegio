@@ -46,22 +46,32 @@
         $hijos=$_REQUEST["hijos"];
             
            
-
-        if(empty($_REQUEST["nombre"] and $_REQUEST["apellido"])){
+        if (strpos($nombre, " ")!== FALSE or strpos($apellido," ")!== FALSE){
             echo("<p>Los datos de su nombre estan incompletos</p>");
-        }
-        else{
-            echo ("<h2>$nombre $apellido<h2>");
+             }
+        else{  
+            if(empty($_REQUEST["nombre"] and $_REQUEST["apellido"])){
+                echo("<p>Los datos de su nombre estan incompletos</p>");
+            }
+            else{
 
-            echo ("<h3>Salario:</h3>");
+                echo ("<h2>$nombre $apellido<h2>");
 
-            $salario_base=$monto*$horas;
-            $salario_ips=($salario_base*$pIPS)/100;
-            $salario_aso=($salario_base*$pASO)/100;
-            $salario_hijos=($salario_base*($hijos*3))/100;
-            $salario_final=($salario_base-$salario_ips-$salario_aso+$salario_hijos);
-            echo("<h4>$salario_final <h4>");
-        }
+                echo ("<h3>Salario:</h3>");
+
+                $salario_base=$monto*$horas;
+                $salario_ips=($salario_base*$pIPS)/100;
+                $salario_aso=($salario_base*$pASO)/100;
+                $salario_hijos=($salario_base*($hijos*3))/100;
+                $salario_final=($salario_base-$salario_ips-$salario_aso+$salario_hijos);
+                $salario_final_final=number_format($salario_final);
+                echo("<h4>$salario_final_final <h4>"); 
+            }
+             }
+           
+             
+         
+        
     ?>
 </body>
 </html>
