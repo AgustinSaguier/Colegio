@@ -10,7 +10,8 @@ try:
     lista=linea.split(",")
 
     val=lista[-1]
-    valor=int(val, 2)
+    val=int(val)
+    
     claveActual=lista[0]
     claveAnterior=claveActual
     while (linea!=""): 
