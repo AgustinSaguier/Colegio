@@ -3,3 +3,8 @@ Central,10
 Central,20
 Cordillera,10
 Cordillera,20
+Cordillera,15
+Tacumbu,25
+Tacumbu,70
+San Bernardino,35
+San Bernardino,10

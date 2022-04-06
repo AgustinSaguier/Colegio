@@ -16,37 +16,50 @@
 #END.
 
 
-
 claveAnterior=0
 claveActual=0
 total=0
 linea=[]
 
-try:
-    archivo=open("main.txt","r")
+def corte():
+    global claveAnterior
+    global total
+    print (claveAnterior, "Total: ", total)
+    total=0
+
+def calcula():
+    global valor
+    global claveActual
+    val=lista[-1]
+    valor=val
+    claveActual=lista[0]
+
+def splitLine():
+    global lista
+    global linea
     linea=archivo.readline()
     lista=linea.split(",")
+    
+    
 
-    val=lista[1]
-    valor=val[:-1]
-    claveActual=lista[0]
+
+try:
+    archivo=open("main.txt","r")
+    splitLine()
+
+    calcula()
     claveAnterior=claveActual
     while (linea!=""): 
         #lista=lista[:-1]
         if (claveAnterior==claveActual):
             total=total+int(valor)         
-            linea=archivo.readline()
-            lista=linea.split(",")
-            val=lista[-1]
-            valor=val[:-1]
-            claveActual=lista[0]
+            splitLine()
+            calcula()
         else:
-           print (claveAnterior, "Total: ", total)
-           total=0
-           claveAnterior=claveActual
+           corte()
+           claveAnterior=claveActual  
     
-    print (claveAnterior, "Total: ", total)
-    total=0
+    corte()
     claveAnterior=claveActual       
 except IOError:
     print ("Error")
