@@ -10,7 +10,7 @@ try:
     lista=linea.split(",")
 
     val=lista[-1]
-    valor=val
+    valor=int(val, 2)
     claveActual=lista[0]
     claveAnterior=claveActual
     while (linea!=""): 
@@ -20,7 +20,7 @@ try:
             linea=archivo.readline()
             lista=linea.split(",")
             val=lista[-1]
-            valor=val
+            valor=int(val,2)
             claveActual=lista[0]
         else:
            print (claveAnterior, "Total: ", total)
