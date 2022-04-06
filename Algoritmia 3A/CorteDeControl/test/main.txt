@@ -2,4 +2,4 @@ Central,5
 Central,10
 Central,20
 Cordillera,10
-Cordillera,15
+Cordillera,20
