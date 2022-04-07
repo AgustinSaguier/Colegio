@@ -22,15 +22,15 @@ try:
     claveAnterior=claveActual
     while (linea!=""): 
         if (claveAnterior==claveActual):
-            total=total+int(value) 
-            value=0
-            i=0
-            n=0        
+            total=total+int(value)      
             linea=archivo.readline()
+            if linea=="":
+                break
             lista=linea.split(",")
             val=lista[-1]
             val=int(val)
-            while(val!=0):
+            value,n,i=0,0,0 
+            while(val!=0 ):
                 dec=val%10
                 value=value+dec*pow(2,i)
                 val=val//10
