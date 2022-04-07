@@ -5,10 +5,10 @@ table, td{
 }
 </style>
 <?php
-$contador=0;
+$number=$_REQUEST["number"];
 echo("<table>");
 echo("<tr>");
-for ($z=0; $z<=7; $z++){
+for ($z=0; $z<=$number; $z++){
     if ($z==0){
         echo"<td><b>X</b></td>";
     }
@@ -17,9 +17,9 @@ for ($z=0; $z<=7; $z++){
     }    
 }
 echo("</tr>");
-for ($y=1; $y<=7; $y++){
+for ($y=1; $y<=$number; $y++){
     echo("<tr>");
-    for ($x=0; $x<=7; $x++){
+    for ($x=0; $x<=$number; $x++){
         if ($x==0){
             echo"<td><b>$y</b></td>";
         }
