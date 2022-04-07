@@ -2,7 +2,9 @@ claveAnterior=0
 claveActual=0
 total=0
 linea=[]
-
+value=0
+i=0
+n=0
 
 try:
     archivo=open("main.txt","r")
@@ -11,17 +13,28 @@ try:
 
     val=lista[-1]
     val=int(val)
-    
+    while(val!=0):
+        dec=val%10
+        value=value+dec*pow(2,i)
+        val=val//10
+        i+=1
     claveActual=lista[0]
     claveAnterior=claveActual
     while (linea!=""): 
-        #lista=lista[:-1]
         if (claveAnterior==claveActual):
-            total=total+int(valor)         
+            total=total+int(value) 
+            value=0
+            i=0
+            n=0        
             linea=archivo.readline()
             lista=linea.split(",")
             val=lista[-1]
-            valor=int(val,2)
+            val=int(val)
+            while(val!=0):
+                dec=val%10
+                value=value+dec*pow(2,i)
+                val=val//10
+                i+=1
             claveActual=lista[0]
         else:
            print (claveAnterior, "Total: ", total)
