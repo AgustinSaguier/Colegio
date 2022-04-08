@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
-</head>
-<body>
-    hello world
-</body>
+  </head>
+  <body>
+    <div class="container">
+    <form action="index.php" method="post">
+      <h3 align="center">GENERADOR DE IMAGENES</h3>
+      <div class="form-group">
+      <p> Elige un tema y cuantas imagenes queres generadas </p>
+      <input type="radio" id="Autos" name="tema" value="hombre">
+            <label for="hombre">Autos</label><br>
+            <input type="radio" id="Frutas" name="tema" value="mujer">
+            <label for="hombre">Frutas</label><br>
+      <label for="number">Cantidad</label> <br />
+      <input
+        type="number"
+        id="cantidad"
+        name="cantidad"
+        placeholder="Cantidad de Imagenes a ser generadas"
+        max="200"
+        class="form-control"
+      />
+      </div>
+      <br>
+      <input type="submit" class="btn btn-primary" value="Enviar" />
+    </form>
+    </div>
+  </body>
 </html>
