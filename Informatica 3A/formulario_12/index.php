@@ -1,6 +1,6 @@
 <?php
 $num=1;
-$cant=4;
+$cant=2;
 
 echo"hello";
 echo"<br>";
