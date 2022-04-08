@@ -8,6 +8,7 @@ table, td{
 $cantidad=$_REQUEST["cantidad"];
 $number=1;
 for ($p=1; $p<=$cantidad; $p++){ 
+    echo"tabla del $number";
     echo("<table>");
     echo("<tr>");
     for ($z=0; $z<=$number; $z++){
