@@ -19,22 +19,28 @@
   </head>
   <body>
     <div class="container">
-    <form action="mult3.php" method="post">
+    <form action="calcIMC.php" method="post">
       <h3 align="center">INDICE DE MASA CORPORAL (FORMULARIO)</h3>
       <div class="form-group">
-      <p>Escriba un numero (0 &lt; numero &le; 100) y mostrare las tablas de multiplicar hasta ese numero</p>
-      <label for="number">Numero</label> <br />
+      <p>Escriva su peso en kilogramos y su altura en centimetros para calcular su indice de masa corporal</p>
+      <label for="number"><b>Peso: </b></label> <br />
       <input
         type="number"
-        id="cantidad"
-        name="cantidad"
-        placeholder="Ingrese un numero"
-        max="200"
+        id="peso"
+        name="peso"
+        class="form-control"
+      />
+      <label for="number"><b>Altura: </b></label> <br />
+      <input
+        type="number"
+        id="altura"
+        name="altura"
         class="form-control"
       />
       </div>
       <br>
       <input type="submit" class="btn btn-primary" value="Enviar" />
+      <input type="reset" class="btn btn-primary"/>
     </form>
     </div>
   </body>
