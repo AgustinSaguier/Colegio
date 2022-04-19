@@ -1,0 +1,11 @@
+Juan,2000
+Juan,4000
+Juan,3000
+Juan,4000
+Luis,4000
+Luis,3000
+Luis,5000
+Raul,3000
+Raul,1000
+Raul,4000
+Raul,5000
