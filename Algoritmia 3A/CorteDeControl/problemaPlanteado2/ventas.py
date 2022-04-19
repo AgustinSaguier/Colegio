@@ -27,7 +27,7 @@ def splitLine():
 
 
 try:
-    archivo=open("notas.txt","r")
+    archivo=open("ventas.txt","r")
     splitLine()
 
     calcula()
