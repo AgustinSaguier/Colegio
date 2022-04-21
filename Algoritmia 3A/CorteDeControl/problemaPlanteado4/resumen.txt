@@ -1,0 +1,2 @@
+La clave * aparecio 3 diferentes ocasiones con una suma total de 4000
+La clave / aparecio 2 diferentes ocasiones con una suma total de 4420
