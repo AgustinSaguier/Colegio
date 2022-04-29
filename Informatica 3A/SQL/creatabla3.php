@@ -8,11 +8,10 @@
 </head>
 <body>
     <?php
-    $sql="CREATE TABLE  Alumnos (
+    $sql="CREATE TABLE  Materias (
         CI int NOT NULL,
-        FirstName varchar(255) NOT NULL,
-        LastName varchar(255),
-        Age int,
+        SubjectName varchar(255) NOT NULL,
+        TotalPoints int,
         PRIMARY KEY (CI)
     );";
    

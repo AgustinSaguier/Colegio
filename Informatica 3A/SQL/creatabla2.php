@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    $sql="CREATE TABLE  Alumnos (
+    $sql="CREATE TABLE  Profesores (
         CI int NOT NULL,
         FirstName varchar(255) NOT NULL,
         LastName varchar(255),
