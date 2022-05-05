@@ -7,11 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="idLibro">idLibro</label>
-    <input type="text" id="idLibro" name="idLibro">
-    <label for="nacionalidad">Nacionalidad</label>
-    <input type="text" id="nacionalidad" name="nacionalidad">
-    <label for="año">Año</label>
-    <input type="text" id="año" name="año">
+    <form action="procesaTabla.php" method="post">
+        <h1>CARGA TABLAS</h1>
+        <label for="idLibro">idLibro</label><br>
+        <input type="text" id="idLibro" name="idLibro"><br>
+        <label for="nacionalidad">Nacionalidad</label><br>
+        <input type="text" id="nacionalidad" name="nacionalidad"><br>
+        <label for="año">Año</label><br>
+        <input type="text" id="año" name="año"><br>
+        <br><input type="submit" value="Cargar">
+    </form>
 </body>
 </html>
