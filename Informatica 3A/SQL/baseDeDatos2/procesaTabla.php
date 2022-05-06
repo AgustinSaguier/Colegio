@@ -18,8 +18,12 @@
     mysqli_select_db($link,"libreria") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
     echo ("<br>Se selecciono la base de datos con exito");
     //el sql que permitira introducir los datos
-    $sql="insert into libros (idLibro,Nacionalidad,Año) values ($idLibro,$nacionalidad,$año)";
-    
+    $sql="INSERT INTO libros (idLibro, Nacionalidad, Año) VALUES ('$idLibro','$nacionalidad','$año')";
+    //ejecutar el comando sql
+    mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
+    echo ("<h3>Se cargaron los datos</h3>");
+    mysqli_close ($link);
+    echo ("<a href='cargaTabla.html'>Cargar Otro</a>")
     
     
     ?>
