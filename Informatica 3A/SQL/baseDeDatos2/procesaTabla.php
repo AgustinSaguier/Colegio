@@ -8,24 +8,63 @@
 </head>
 <body>
     <?php
-    include 'conexion.php';
-    /*recuperar los datos que vamos a incluir
-    en la base de datos*/
-    $idLibro=$_REQUEST["idLibro"];
-    $nacionalidad=$_REQUEST["nacionalidad"];
-    $año=$_REQUEST["año"];
-    //seleccionar la base de datos
-    mysqli_select_db($link,"libreria") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
-    echo ("<br>Se selecciono la base de datos con exito");
-    //el sql que permitira introducir los datos
-    $sql="INSERT INTO libros (idLibro, Nacionalidad, Año) VALUES ('$idLibro','$nacionalidad','$año')";
-    //ejecutar el comando sql
-    mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
-    echo ("<h3>Se cargaron los datos</h3>");
-    mysqli_close ($link);
-    echo ("<a href='cargaTabla.html'>Cargar Otro</a>")
-    
-    
+    $code=$_REQUEST["hidden"];
+    if ($code==1){
+        include 'conexion.php';
+        //recuperar los datos que vamos a incluir
+        //en la base de datos
+        $idLibro=$_REQUEST["idLibro"];
+        $nacionalidad=$_REQUEST["nacionalidad"];
+        $año=$_REQUEST["año"];
+        //seleccionar la base de datos
+        mysqli_select_db($link,"libreria") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
+        echo ("<br>Se selecciono la base de datos con exito");
+        //el sql que permitira introducir los datos
+        $sql="INSERT INTO libros (idLibro, Nacionalidad, Año) VALUES ('$idLibro','$nacionalidad','$año')";
+        //ejecutar el comando sql
+        mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
+        echo ("<h3>Se cargaron los datos a la tabla LIBROS</h3>");
+        mysqli_close ($link);
+        echo ("<a href='cargaTabla.html'>Cargar Otro</a>");  
+    }
+    elseif ($code==2){
+        include 'conexion.php';
+        //recuperar los datos que vamos a incluir
+        //en la base de datos
+        $idAutor=$_REQUEST["idAutor"];
+        $nacionalidad=$_REQUEST["nacionalidad"];
+        $añoNacimeinto=$_REQUEST["añoNacimiento"];
+        $nombre=$_REQUEST["nombre"]
+        //seleccionar la base de datos
+        mysqli_select_db($link,"libreria") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
+        echo ("<br>Se selecciono la base de datos con exito");
+        //el sql que permitira introducir los datos
+        $sql="INSERT INTO libros (idAutor, Nacionalidad, Nombre, AñoNacimiento) VALUES ('$idAutor','$nacionalidad','$nombre','$añoNacimiento')";
+        //ejecutar el comando sql
+        mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
+        echo ("<h3>Se cargaron los datos a la tabla AUTORES</h3>");
+        mysqli_close ($link);
+        echo ("<a href='cargaTabla.html'>Cargar Otro</a>");
+    }
+    elseif ($code==3){
+        include 'conexion.php';
+        //recuperar los datos que vamos a incluir
+        //en la base de datos
+        $idEditorial=$_REQUEST["idEditorial"];
+        $email=$_REQUEST["email"];
+        $direccion=$_REQUEST["direccion"];
+        $nombre=$_REQUEST["nombre"]
+        //seleccionar la base de datos
+        mysqli_select_db($link,"libreria") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
+        echo ("<br>Se selecciono la base de datos con exito");
+        //el sql que permitira introducir los datos
+        $sql="INSERT INTO libros (idEditorial, Email, Nombre, Direccion) VALUES ('$idEditorial','$email','$nombre','$direccion')";
+        //ejecutar el comando sql
+        mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
+        echo ("<h3>Se cargaron los datos a la tabla EDITORIAL</h3>");
+        mysqli_close ($link);
+        echo ("<a href='cargaTabla.html'>Cargar Otro</a>")
+    }
     ?>
 </body>
 </html>
