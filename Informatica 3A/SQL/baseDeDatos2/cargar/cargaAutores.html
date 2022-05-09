@@ -7,17 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="procesaTabla.php" method="post">
-        <label for="idAutor">idAutor</label><br>
+    <form action="cargaTabla.php" method="post">
+        <label for="idAutor"><span>idAutor</span> </label><br>
         <input type="text" id="idAutor" name="idAutor"><br>
-        <label for="nacionalidad">Nacionalidad</label><br>
+        <label for="nacionalidad"><span>Nacionalidad</span> </label><br>
         <input type="text" id="nacionalidad" name="nacionalidad"><br>
-        <label for="añoNacimiento">Año Nacimiento</label><br>
+        <label for="añoNacimiento"><span>Año Nacimiento</span> </label><br>
         <input type="text" id="añoNacimiento" name="añoNacimiento"><br>
-        <label for="nombre">Nombre</label><br>
+        <label for="nombre"><span>Nombre</span> </label><br>
         <input type="text" id="nombre" name="nombre"><br>
         <input type="hidden" name="hidden" id="hidden" value="2">
         <br><input type="submit" value="Cargar">
     </form>
 </body>
+<style>
+    body{
+        background-color: #212429
+    }
+    span{
+        color: white;
+    }
+</style>
 </html>

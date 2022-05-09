@@ -7,17 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="procesaTabla.php" method="post">
-        <label for="idEditorial">idEditorial</label><br>
+    <form action="cargaTabla.php" method="post">
+        <label for="idEditorial"><span>idEditorial</span> </label><br>
         <input type="text" id="idEditorial" name="idEditorial"><br>
-        <label for="email">Email</label><br>
+        <label for="email"><span>Email</span> </label><br>
         <input type="text" id="email" name="email"><br>
-        <label for="direccion">Direccion</label><br>
+        <label for="direccion"><span>Direccion</span> </label><br>
         <input type="text" id="direccion" name="direccion"><br>
-        <label for="nombre">Nombre</label><br>
+        <label for="nombre"><span>Nombre</span> </label><br>
         <input type="text" id="nombre" name="nombre"><br>
         <input type="hidden" name="hidden" id="hidden" value="3">
         <br><input type="submit" value="Cargar">
     </form>
 </body>
+<style>
+    body{
+        background-color: #212429
+    }
+    span{
+        color: white;
+    }
+</style>
 </html>
