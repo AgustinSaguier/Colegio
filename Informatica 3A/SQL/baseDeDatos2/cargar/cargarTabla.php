@@ -10,7 +10,7 @@
     <?php
     $code=$_REQUEST["hidden"];
     if ($code==1){
-        include 'conexion.php';
+        include '../conexion.php';
         //recuperar los datos que vamos a incluir
         //en la base de datos
         $idLibro=$_REQUEST["idLibro"];
@@ -25,10 +25,10 @@
         mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
         echo ("<h3>Se cargaron los datos a la tabla LIBROS</h3>");
         mysqli_close ($link);
-        echo ("<a href='cargaTabla.html'>Cargar Otro</a>");  
+        echo ("<a href='cargaLibros.html'>Cargar Otro</a>");  
     }
     elseif ($code==2){
-        include 'conexion.php';
+        include '../conexion.php';
         //recuperar los datos que vamos a incluir
         //en la base de datos
         $idAutor=$_REQUEST["idAutor"];
@@ -44,10 +44,10 @@
         mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
         echo ("<h3>Se cargaron los datos a la tabla AUTORES</h3>");
         mysqli_close ($link);
-        echo ("<a href='cargaTabla.html'>Cargar Otro</a>");
+        echo ("<a href='cargaAutores.html'>Cargar Otro</a>");
     }
     elseif ($code==3){
-        include 'conexion.php';
+        include '../conexion.php';
         //recuperar los datos que vamos a incluir
         //en la base de datos
         $idEditorial=$_REQUEST["idEditorial"];
@@ -63,7 +63,7 @@
         mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
         echo ("<h3>Se cargaron los datos a la tabla EDITORIAL</h3>");
         mysqli_close ($link);
-        echo ("<a href='cargaTabla.html'>Cargar Otro</a>");
+        echo ("<a href='cargaEditorial.html'>Cargar Otro</a>");
     }
     ?>
 </body>
