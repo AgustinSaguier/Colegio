@@ -1,0 +1,8 @@
+vendedor1,1000
+vendedor1,2000
+vendedor1,5000
+vendedor2,1000
+vendedor2,6000
+vendedor3,3000
+vendedor3,1000
+vendedor3,3000
