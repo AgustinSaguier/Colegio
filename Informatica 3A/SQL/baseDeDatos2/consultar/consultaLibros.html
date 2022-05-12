@@ -7,9 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+<h2>Consulta General</h2>
 <form action="consultarTabla.php" method="post">
 <input type="hidden" value="1" id="code" name="code">
-<input type="submit" value="Consultar" class="submit">
+<input type="submit" value="Consulta General " class="submit">
+</form>
+<h2>Consultar en particular</h2>
+<form action="consultaGeneral.php" method="post">
+    <input type="hidden" name="code" id="code" value="1">
+    <label for="id">Ingrese id: </label>
+    <input type="text" name="id" id="id"><br><br>
+    <input type="submit" value="Consultar" class="submit">
 </form>
 </body>
 <style>

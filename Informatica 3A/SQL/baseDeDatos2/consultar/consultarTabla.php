@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    table, th, td {
+    border: 1px solid;
+    text-align:center;
+}
+
+</style>
 <body>
     <?php
     $code=$_REQUEST["code"];
@@ -23,18 +30,6 @@
         //cuento la cantidad de filas
         $cantFilas=mysqli_num_rows($tabla);
         echo("<hr>");
-        /*for ($k=0;$k<$cantFilas;$k++){
-            //Recupero la fila
-            $fila=mysqli_fetch_array($tabla);
-            echo ("idLibro: ".$fila["idLibro"]);
-            echo ("<br>");
-            echo ("Año: ".$fila["Año"]);
-            echo ("<br>");
-            echo ("Nacionalidad: ".$fila["Nacionalidad"]);
-            echo ("<br>");
-            echo ("<hr>");
-        }
-        */
         echo("<table>");
         for ($z=0;$z<=$cantFilas;$z++){ 
         if ($z==0){
@@ -70,20 +65,29 @@
         //cuento la cantidad de filas
         $cantFilas=mysqli_num_rows($tabla);
         echo("<hr>");
-        for ($k=0;$k<$cantFilas;$k++){
-            //Recupero la fila
-            $fila=mysqli_fetch_array($tabla);
-            echo ("idAutor: ".$fila["idAutor"]);
-            echo ("<br>");
-            echo ("Nacionalidad: ".$fila["Nacionalidad"]);
-            echo ("<br>");
-            echo ("Año de Nacimiento: ".$fila["AñoNacimiento"]);
-            echo ("<br>");
-            echo ("Nombre: ".$fila["Nombre"]);
-            echo ("<br>");
-            echo ("<hr>");
+        echo("<table>");
+        for ($z=0;$z<=$cantFilas;$z++){ 
+        if ($z==0){
+            echo("<tr>
+            <td>idAutor</td>
+            <td>Nombre</td>
+            <td>Nacionalidad</td>
+            <td>AñoNacimiento</td>
+            </tr>");
         }
+        else{
+            $fila=mysqli_fetch_array($tabla);
+            echo("<tr>
+            <td>".$fila["idAutor"]."</td>
+            <td>".$fila["Nombre"]."</td>
+            <td>".$fila["Nacionalidad"]."</td>
+            <td>".$fila["AñoNacimiento"]."</td>
+            </tr>");
+        }
+        }
+        echo("</table>");
         mysqli_close($link);
+
     }
     else if ($code==3){
         include "../conexion.php";
@@ -99,19 +103,27 @@
         //cuento la cantidad de filas
         $cantFilas=mysqli_num_rows($tabla);
         echo("<hr>");
-        for ($k=0;$k<$cantFilas;$k++){
-            //Recupero la fila
-            $fila=mysqli_fetch_array($tabla);
-            echo ("idEditorial: ".$fila["idEditorial"]);
-            echo ("<br>");
-            echo ("Email: ".$fila["Email"]);
-            echo ("<br>");
-            echo ("Direccion: ".$fila["Direccion"]);
-            echo ("<br>");
-            echo ("Nombre: ".$fila["Nombre"]);
-            echo ("<br>");
-            echo ("<hr>");
+        echo("<table>");
+        for ($z=0;$z<=$cantFilas;$z++){ 
+        if ($z==0){
+            echo("<tr>
+            <td>idEditorial</td>
+            <td>Nombre</td>
+            <td>Email</td>
+            <td>Direccion</td>
+            </tr>");
         }
+        else{
+            $fila=mysqli_fetch_array($tabla);
+            echo("<tr>
+            <td>".$fila["idEditorial"]."</td>
+            <td>".$fila["Nombre"]."</td>
+            <td>".$fila["Email"]."</td>
+            <td>".$fila["Direccion"]."</td>
+            </tr>");
+        }
+        }
+        echo("</table>");
         mysqli_close($link);
     }
 
