@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <style>
-    table, th, td {
+    table, td {
     border: 1px solid;
     text-align:center;
 }
+    tr.title {
+        background-color: #04AA6D;
+    }
 
 </style>
 <body>
@@ -33,7 +36,7 @@
         echo("<table>");
         for ($z=0;$z<=$cantFilas;$z++){ 
         if ($z==0){
-            echo("<tr>
+            echo("<tr class='title'>
             <td>idLibro</td>
             <td>Año</td>
             <td>Nacionalidad</td>
@@ -68,7 +71,7 @@
         echo("<table>");
         for ($z=0;$z<=$cantFilas;$z++){ 
         if ($z==0){
-            echo("<tr>
+            echo("<tr class='title'>
             <td>idAutor</td>
             <td>Nombre</td>
             <td>Nacionalidad</td>
@@ -106,7 +109,7 @@
         echo("<table>");
         for ($z=0;$z<=$cantFilas;$z++){ 
         if ($z==0){
-            echo("<tr>
+            echo("<tr class='title'>
             <td>idEditorial</td>
             <td>Nombre</td>
             <td>Email</td>
