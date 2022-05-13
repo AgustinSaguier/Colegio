@@ -1,3 +1,3 @@
-La clave jose tiene una total de 71, tiene un promedio de 35.5 y aparece una cantidad de 2 veces
-La clave marcos tiene una total de 25, tiene un promedio de 12.5 y aparece una cantidad de 2 veces
-La clave pablo tiene una total de 61, tiene un promedio de 20.333333333333332 y aparece una cantidad de 3 veces
+La clave jose tiene una suma total de 71, tiene un promedio de 35.5 y aparece una cantidad de 2 veces
+La clave marcos tiene una suma total de 25, tiene un promedio de 12.5 y aparece una cantidad de 2 veces
+La clave pablo tiene una suma total de 61, tiene un promedio de 20.333333333333332 y aparece una cantidad de 3 veces
