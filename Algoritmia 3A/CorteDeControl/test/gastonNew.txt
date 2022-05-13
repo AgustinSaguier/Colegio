@@ -1,0 +1,7 @@
+jose,2
+jose,69
+marcos,20
+marcos,5
+pablo,1
+pablo,10
+pablo,50

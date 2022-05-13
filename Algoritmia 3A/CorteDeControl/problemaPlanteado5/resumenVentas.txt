@@ -1,4 +1,4 @@
 Vendedor		Total		Promedio
 vendedor1		8000		2666.6666666666665
-vendedor2		15000		7500.0
-vendedor3		22000		7333.333333333333
+vendedor2		7000		3500.0
+vendedor3		7000		2333.3333333333335
