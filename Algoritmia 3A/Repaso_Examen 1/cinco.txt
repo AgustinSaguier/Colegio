@@ -1,0 +1,7 @@
+Partido Colorado,1434
+Partido Colorado,5324
+Partido Colorado,9532
+Partido Liberal,1234
+Partido Liberal,2556
+Partido Liberal,6234
+Partido Union,2123

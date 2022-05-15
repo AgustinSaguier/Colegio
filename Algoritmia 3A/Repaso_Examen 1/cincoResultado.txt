@@ -1,0 +1,3 @@
+Partido Colorado,16290
+Partido Liberal,10024
+Partido Union,2123
