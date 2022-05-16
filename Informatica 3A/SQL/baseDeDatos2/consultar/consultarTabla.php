@@ -53,6 +53,7 @@
         }
         echo("</table>");
         mysqli_close($link);
+        echo ("<a href='consultaLibros.html'>Volver</a>");  
     }
     else if ($code==2){
         include "../conexion.php";
@@ -90,6 +91,7 @@
         }
         echo("</table>");
         mysqli_close($link);
+        echo ("<a href='consultaAutores.html'>Volver</a>");  
 
     }
     else if ($code==3){
@@ -128,6 +130,7 @@
         }
         echo("</table>");
         mysqli_close($link);
+        echo ("<a href='consultaEditorial.html'>Volver</a>");  
     }
 
     ?>
