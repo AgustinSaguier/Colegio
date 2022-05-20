@@ -98,10 +98,17 @@
     </div>
 <!--FILTRAR-->
     <div id="filtrarFab">
-      <p>Hello</p>
+      <h1>Filtrar</h1>
+      <form action="filtrar.php" method="post">
+        <input type="hidden" name="code" value="1">
+        <p>Filtar productos que empiezen con la letra
+          <input type="text" name="letter" id="letter">
+        </p>
+        <input type="submit" value="filtrar">
+      </form>
     </div>
     <div id="filtrarArt">
-      <form action="filtrar.php">
+      <form action="filtrar.php" method="post">
         <input type="hidden" name="code" value="2">
         <h1>Filtar</h1>
         <p>Filtar productos donde es el precio es 
@@ -114,7 +121,6 @@
         </select>
         a 
         <input type="number" name="num" id="num"></p>
-        <br>
         <input type="submit" value="filtrar">
       </form>
     </div>
