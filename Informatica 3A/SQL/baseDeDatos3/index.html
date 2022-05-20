@@ -17,14 +17,14 @@
       <a href="#cargarArt">Tabla Articulos</a>
     </div>
   </div>
-<!--CARGAR-->
+<!--CONSULTAR-->
   <div class="dropdown">
     <button class="dropbtn"> CONSULTAR
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Tabla Fabricantes</a>
-      <a href="#">Tabla Articulos</a>
+      <a href="#consultarFab">Tabla Fabricantes</a>
+      <a href="#consultarArt">Tabla Articulos</a>
     </div>
   </div>
   <div class="dropdown">
@@ -32,8 +32,8 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Tabla Fabricantes</a>
-      <a href="#">Tabla Articulos</a>
+      <a href="#filtrarFab">Tabla Fabricantes</a>
+      <a href="#filtrarArt">Tabla Articulos</a>
     </div>
   </div>   
   <a href="" class="center">BD TIENDA INFORMATICA</a>
@@ -72,9 +72,52 @@
       </form>
     </div>
 <!--CONSULTAR-->
-    <div id="cargarFab"></div>
-    <div id="cargarArt"></div>
+    <div id="consultarFab">
+      <h1>Consulta General</h1>
+      <form action="consultar.php" method="post">
+        <input type="hidden" name="code" value="1">
+        <input type="submit" value="consultar">
+      </form>
+      <h1>Consular Nombres</h1>
+      <form action="consultar.php" method="post">
+        <input type="hidden" name="code" value="3">
+        <input type="submit" value="consultar">
+      </form>
+    </div>
+    <div id="consultarArt">
+      <h1>Consulta General</h1>
+      <form action="consultar.php" method="post">
+        <input type="hidden" name="code" value="2">
+        <input type="submit" value="consultar">
+      </form>
+      <h1>Consular Nombres</h1>
+      <form action="consultar.php" method="post">
+        <input type="hidden" name="code" value="4">
+        <input type="submit" value="consultar">
+      </form>
+    </div>
 <!--FILTRAR-->
+    <div id="filtrarFab">
+      <p>Hello</p>
+    </div>
+    <div id="filtrarArt">
+      <form action="filtrar.php">
+        <input type="hidden" name="code" value="2">
+        <h1>Filtar</h1>
+        <p>Filtar productos donde es el precio es 
+        <select name="operador" id="operador">
+          <option value="eq">=</option>
+          <option value="gt">&gt;</option>
+          <option value="ge">&ge;</option>
+          <option value="lt">&lt;</option>
+          <option value="le">&le;</option>
+        </select>
+        a 
+        <input type="number" name="num" id="num"></p>
+        <br>
+        <input type="submit" value="filtrar">
+      </form>
+    </div>
 </div>
 
 

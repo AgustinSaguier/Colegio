@@ -8,9 +8,9 @@
 </head>
 <body>
     <?php
-    $code=$_REQUEST["hidden"];
+    $code=$_REQUEST["code"];
     if ($code==1){
-        include '../conexion.php';
+        include 'conexion.php';
         //recuperar los datos que vamos a incluir
         //en la base de datos
         $codigoFab=$_REQUEST["codigoFab"];
@@ -19,31 +19,31 @@
         mysqli_select_db($link,"TiendaInformatica") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
         echo ("<br>Se selecciono la base de datos con exito");
         //el sql que permitira introducir los datos
-        $sql="INSERT INTO fabricantes (CodigoFab, Nombr) VALUES ('$codigoFab','$nombreFab')";
+        $sql="INSERT INTO fabricantes (CodigoFab, Nombre) VALUES ('$codigoFab','$nombreFab')";
         //ejecutar el comando sql
         mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
-        echo ("<h3>Se cargaron los datos a la tabla LIBROS</h3>");
+        echo ("<h3>Se cargaron los datos a la tabla FABRICANTES</h3>");
         mysqli_close ($link);
-        echo ("<a href='#cargarFab.html'>Cargar Otro</a>");  
+        echo ("<a href='index.html'>Cargar Otro</a>");  
     }
     elseif ($code==2){
-        include '../conexion.php';
+        include 'conexion.php';
         //recuperar los datos que vamos a incluir
         //en la base de datos
-        $idAutor=$_REQUEST["idAutor"];
-        $nacionalidad=$_REQUEST["nacionalidad"];
-        $añoNacimiento=$_REQUEST["añoNacimiento"];
-        $nombre=$_REQUEST["nombre"];
+        $codigoArt=$_REQUEST["codigoArt"];
+        $nombreArt=$_REQUEST["nombreArt"];
+        $precioArt=$_REQUEST["precioArt"];
+        $codigoFab=$_REQUEST["codigoFab"];
         //seleccionar la base de datos
-        mysqli_select_db($link,"libreria") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
+        mysqli_select_db($link,"TiendaInformatica") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
         echo ("<br>Se selecciono la base de datos con exito");
         //el sql que permitira introducir los datos
-        $sql="INSERT INTO autor (idAutor, Nacionalidad, Nombre, AñoNacimiento) VALUES ('$idAutor','$nacionalidad','$nombre','$añoNacimiento')";
+        $sql="INSERT INTO articulos (CodigoArt, Nombre, Precio, CodigoFab) VALUES ('$codigoArt','$nombreArt','$precioArt','$codigoFab')";
         //ejecutar el comando sql
         mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
-        echo ("<h3>Se cargaron los datos a la tabla AUTORES</h3>");
+        echo ("<h3>Se cargaron los datos a la tabla ARTICULOS</h3>");
         mysqli_close ($link);
-        echo ("<a href='cargaAutores.html'>Cargar Otro</a>");
+        echo ("<a href='index.html'>Cargar Otro</a>");  
     }
 ?>
 </body>
