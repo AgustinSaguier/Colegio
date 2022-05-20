@@ -32,4 +32,4 @@
 
     mysqli_close($link) or die ("<br>ERROR Al CERRAR BASE DE DATOS");
     echo("<br>Se cerro el la base de datos con exito");
-?>
+    ?>

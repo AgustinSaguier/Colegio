@@ -13,8 +13,8 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Tabla Fabricantes</a>
-      <a href="#">Tabla Articulos</a>
+      <a href="#cargarFab">Tabla Fabricantes</a>
+      <a href="#cargarArt">Tabla Articulos</a>
     </div>
   </div>
 <!--CARGAR-->
@@ -41,8 +41,36 @@
 <!--CONTENT-->
 <div id="content">
 <!--CARGAR-->
-    <div id="cargarFab"></div>
-    <div id="cargaArt"></div>
+    <div id="cargarFab">
+      <form action="cargar.php" method="post">
+        <input type="hidden" value="1" name="code">
+        <label for="codigoFab">CodigoFab: </label>
+        <input type="text" name="codigoFab" id="codigoFab">
+        <br>
+        <label for="nombreFab">Nombre: </label>
+        <input type="text" name="nombreFab" id="nombreFab">
+        <br>
+        <input type="submit" value="Cargar">
+      </form>
+    </div>
+    <div id="cargarArt">
+      <form action="cargar.php" method="post">
+        <input type="hidden" value="2" name="code">
+        <label for="codigoArt">codigoArt: </label>
+        <input type="text" name="codigoArt" id="codigoArt">
+        <br>
+        <label for="nombreArt">Nombre: </label>
+        <input type="text" name="nombreArt" id="nombreArt">
+        <br>
+        <label for="precioArt">Precio</label>
+        <input type="number" name="precioArt" id="precioArt">
+        <br>
+        <label for ="codigoFab">codigoFab: </label>
+        <input type="text" name="codigoFab" id="codigoFab">
+        <br>
+        <input type="submit" value="Cargar">
+      </form>
+    </div>
 <!--CONSULTAR-->
     <div id="cargarFab"></div>
     <div id="cargarArt"></div>

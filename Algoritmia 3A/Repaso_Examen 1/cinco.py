@@ -1,6 +1,7 @@
-list=[]
+listaGanadora=""
+highestSum=0
 totalSum=0
-with open ("cinco.txt","r") as file, open ("cincoResultado.txt","w") as result:
+with open ("cinco.txt","r") as file:
     line=file.readline()
     line=line.strip()
     lineSplit=line.split(",")
@@ -18,16 +19,11 @@ with open ("cinco.txt","r") as file, open ("cincoResultado.txt","w") as result:
             claveActual=lineSplit[0]
             sum=int(lineSplit[1])
         else:
-            list.append([claveAnterior,totalSum])
-            result.write(claveAnterior+","+str(totalSum)+"\n")
-            print("Lista: " + claveAnterior + " Votos: " + str(totalSum))
-            claveAnterior=claveActual
+            print("La lista " + claveAnterior + " tiene " + str(totalSum) + " votos")
+            if totalSum>highestSum:
+                highestSum=totalSum
+                listaGanadora="La lista ganadora es " + claveAnterior + " con " + str (highestSum) + " votos"
             totalSum=0
-    result.write(claveAnterior+","+str(totalSum))
-    print("Lista: " + claveAnterior + " Votos: " + str(totalSum))
-    list.append([claveAnterior,totalSum])
-sortedList=sorted(list, key = lambda x: x[1])
-listaGanadora=(sortedList[-1])
-nombreListaGanadora=listaGanadora[0]
-votosListaGanadora=listaGanadora[1]
-print ("La lista ganadora es " + nombreListaGanadora + " con una cantidad de " + str(votosListaGanadora) + " votos")
+            claveAnterior=claveActual
+print("La lista " + claveAnterior + " tiene " + str(totalSum) + " votos")
+print(listaGanadora)
