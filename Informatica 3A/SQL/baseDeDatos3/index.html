@@ -70,6 +70,11 @@
         <br>
         <input type="submit" value="Cargar">
       </form>
+      <form action="cargar.php">
+        <input type="hidden" name="code" value="3">
+        <p>Cargar Traje Espacial de NASA a articulos</p>
+        <input type="submit" value="Cargar">
+      </form>
     </div>
 <!--CONSULTAR-->
     <div id="consultarFab">
@@ -108,9 +113,9 @@
       </form>
     </div>
     <div id="filtrarArt">
+      <h1>Filtar</h1>
       <form action="filtrar.php" method="post">
         <input type="hidden" name="code" value="2">
-        <h1>Filtar</h1>
         <p>Filtar productos donde es el precio es 
         <select name="operador" id="operador">
           <option value="eq">=</option>
@@ -122,6 +127,49 @@
         a 
         <input type="number" name="num" id="num"></p>
         <input type="submit" value="filtrar">
+      </form>
+      <form action="filtrar.php">
+        <input type="hidden" name="code" value="3">
+        <p>Filtar productos con precio entre 
+        <input type="number" name="price1" id="price1">
+        y
+        <input type="number" name="price2" id="price2">
+        <br>
+        <br> 
+        <input type="submit" value="filtrar">
+        </p>
+      </form>
+      <form action="filtrar.php" method="post">
+        <input type="hidden" name="code" value="4">
+        <p>Obten los precios en dolares</p>
+        <input type="submit" value="filtrar">
+      </form>
+      <form action="filtrar.php" method="post">
+        <input type="hidden" name="code" value="5">
+        <p>Obtener precio medio de productos cuyo codigo fabricante es igual
+        a <input type="number" name="codi" id="codi">
+        </p>
+        <input type="submit" value="Filtrar">
+      </form>
+      <form action="filtrar.php" method="post">
+        <input type="hidden" name="code" value="6">
+        <p>Obten los productos  con el precio ordenado de manera 
+          <select name="manera" id="manera">
+            <option value="asc">Ascendente</option>
+            <option value="des">Descendente</option>
+          </select>
+        </p>
+        <input type="submit" value="Filtar">
+      </form>
+      <form action="filtrar.php" method="post">
+        <input type="hidden" name="code" value="7">
+        <p>Obten los productos  con el nombre ordenado de manera 
+          <select name="manera" id="manera">
+            <option value="asc">Ascendente</option>
+            <option value="des">Descendente</option>
+          </select>
+        </p>
+        <input type="submit" value="Filtar">
       </form>
     </div>
 </div>

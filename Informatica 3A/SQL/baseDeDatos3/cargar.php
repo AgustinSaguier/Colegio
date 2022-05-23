@@ -45,6 +45,18 @@
         mysqli_close ($link);
         echo ("<a href='index.html'>Cargar Otro</a>");  
     }
+    elseif($code==3){
+        include 'conexion.php';
+        mysqli_select_db($link,"TiendaInformatica") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
+        echo ("<br>Se selecciono la base de datos con exito");
+        //el sql que permitira introducir los datos
+        $sql="INSERT INTO articulos (CodigoArt, Nombre, Precio, CodigoFab) VALUES (3,'Traje Espacial','1500000',2)";
+        //ejecutar el comando sql
+        mysqli_query ($link,$sql) or die ("<br>ERROR AL INSERTAR DATOS");
+        echo ("<h3>Se cargaron los datos a la tabla ARTICULOS</h3>");
+        mysqli_close ($link);
+        echo ("<a href='index.html'>Volver</a>");  
+    }
 ?>
 </body>
 </html>
