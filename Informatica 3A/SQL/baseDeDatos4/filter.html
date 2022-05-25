@@ -10,8 +10,59 @@
     body{
         background-color: antiquewhite;
     }
+
+    input#blank {
+        border: none;
+        background-color: transparent;
+    }
+
+    input#small {
+        width: 40px;
+    }
+    
 </style>
 <body>
-    
+    <h2>Busqueda Avanzada de Articulos</h2>
+    <form action="Ordenar.php" method="" target="content">
+        <input type="hidden" name="code" value="1">
+        <input type="submit" value="Ordenar de Mayor a Menor ↑↓" id="blank">
+    </form>
+    <form action="Ordenar.php" method="" target="content">
+        <input type="hidden" name="code" value="2">
+        <input type="submit" value="Ordenar de Menor a Mayor ↓↑" id="blank">
+    </form>
+    <form action="convertir.php" method="" target="content">
+        <input type="submit" value="Convertir a ₲ Gs." id="blank">
+    </form>
+    <form action="precios.php" method="" target="content">
+       <input type="hidden" name="code" value="1">
+       <input type="submit" value="Mostrar articulos con un precio entre $ " id="blank"><input type="number" name="precio1" id="small"> y $ <input type="number" name="precio2" id="small"></p>
+    </form>
+    <form action="precios.php" method="" target="content">
+        <input type="hidden" name="code" value="2">
+        <input type="submit" value="Mostrar articulos donde el precio es" id="blank">   
+            <select name="operador" id="operador">
+              <option value="eq">=</option>
+              <option value="gt">&gt;</option>
+              <option value="ge">&ge;</option>
+              <option value="lt">&lt;</option>
+              <option value="le">&le;</option>
+            </select>
+            a $
+            <input type="number" name="precio" id="small">
+    </form>
+    <form action="relacion.php" method="" target="content">
+        <input type="hidden" name="code" value="1">
+        <input type="submit" value="Obtener articulos cuyo codigo de fabricante es igual a " id="blank"> <input type="number" name="codFab" id="small">
+    </form>
+    <p><b>Extras:</b></p>
+    <form action="precios.php" method="" target="content">
+        <input type="hidden" name="code" value="3">
+        <input type="submit" value="Mostrar precio medio de todos los articulos" id="blank">
+    </form>
+    <form action="precios.php" method="" target="content">
+        <input type="hidden" name="code" value="4">
+        <input type="submit" value="Mostrar precio medio de los articulos con codFab igual a" id="blank"><input type="number" name="codFab" id="small">
+    </form>
 </body>
 </html>

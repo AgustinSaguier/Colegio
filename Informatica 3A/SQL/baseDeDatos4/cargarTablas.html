@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+.left {
+  left: 0;
+  border: solid 1px black;
+}
+
+
+.right {
+  right: 0;
+  border: solid 1px black;
+}
+
+.centered {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  text-align: center;
+}
+</style>
+<body>
+    <div class="split left">
+        <div class="centered">
+            <form action="cargar.php" method="post">
+                <h1>Cargar Tabla Fabricantes</h1>
+                <input type="hidden" value="1" name="code">
+                <label for="codigoFab">CodigoFab: </label>
+                <input type="text" name="codigoFab" id="codigoFab">
+                <br><br>
+                <label for="nombreFab">Nombre: </label>
+                <input type="text" name="nombreFab" id="nombreFab">
+                <br><br>
+                <input type="submit" value="Cargar">
+            </form>
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered">
+            <h1>Cargar Tabla Articulos</h1>
+            <form action="cargar.php" method="post">
+                <input type="hidden" value="2" name="code">
+                <label for="codigoArt">codigoArt: </label>
+                <input type="text" name="codigoArt" id="codigoArt">
+                <br><br>
+                <label for="nombreArt">Nombre: </label>
+                <input type="text" name="nombreArt" id="nombreArt">
+                <br><br>
+                <label for="precioArt">Precio</label>
+                <input type="number" name="precioArt" id="precioArt">
+                <br><br>
+                <label for ="codigoFab">codigoFab: </label>
+                <input type="text" name="codigoFab" id="codigoFab">
+                <br><br>
+                <input type="submit" value="Cargar">
+              </form>
+        </div>
+      </div>
+</body>
+</html>

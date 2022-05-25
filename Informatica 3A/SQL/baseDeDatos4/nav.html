@@ -7,11 +7,86 @@
     <title>Document</title>
 </head>
 <style>
-    body{
-        background-color: aqua;
-    }
+
+
+      .box div {
+        margin-top: 0px;
+        height: 75px;
+        display: inline-block;
+        text-align: center;
+        color: #000000;
+        font-family: arial, sans-serif;
+        vertical-align: top;
+      }
+      .green {
+        background-color: white;
+        margin-left: 250px;
+        width: 400px;
+      }
+
+      .blue {
+        background-color: white;
+        width: 100px;
+      }
+      .gray {
+        background-color: white;
+        width: 600px;
+      }
+      .pink {
+        background-color: white;
+        width: 200px;
+      }
+      .yellow {
+        background-color: white;
+        width: 100px;
+      }
+
+      div#cargar{
+          margin-top: 30px;
+      }
+
+      input#buscador{
+          height: 50px;
+          margin-left: 50px;
+          margin-top: 10px;
+          width: 500px;
+          border: solid black 2px;
+      }
+
+      input#buscar{
+          height: 50px;
+          margin-top: 12px;
+          width: 175px;
+          border: solid black 1px;
+          background-color: white;
+      }
+
 </style>
 <body>
-    
+    <body> 
+        <form class="box" action="busqueda.php" method="" target="content">
+            <div class="green">
+                <h2>Tienda Informatica</h2>
+            </div>
+            <div class="blue">
+                <h8>Seleccione la tabla</h8>
+                <br><br>
+                <select name="seleccion" id="selectTable">
+                <option value="Fabricantes">Fabricantes</option>
+                <option value="Articulos">Articulos</option>
+                </select>
+            </div>
+            <div class="gray">
+                <input type="text" name="letter" id="buscador" placeholder="Busca cualquier fabricante/articulo">
+            </div>
+            <div class="pink">
+                <input type="submit" value="Buscar" id="buscar">
+            </div>
+            <div class="yellow">
+                <div id="cargar">
+                <a href="cargarTablas.html" id="cargar" target="_blank">Cargar Tablas</a>
+                </div>
+            </div>
+          </form>
 </body>
 </html>
