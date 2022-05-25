@@ -62,7 +62,20 @@
     </form>
     <form action="precios.php" method="" target="content">
         <input type="hidden" name="code" value="4">
-        <input type="submit" value="Mostrar precio medio de los articulos con codFab igual a" id="blank"><input type="number" name="codFab" id="small">
+        <input type="submit" value="Mostrar precio medio de los articulos de codFab igual a" id="blank"><input type="number" name="codFab" id="small">
+    </form>
+    <form action="precios.php" method="" target="content">
+        <input type="hidden" name="code" value="5">
+        <input type="submit" value="Mostrar cantidad de articulos con precio" id="blank">
+        <select name="operador" id="operador">
+              <option value="eq">=</option>
+              <option value="gt">&gt;</option>
+              <option value="ge">&ge;</option>
+              <option value="lt">&lt;</option>
+              <option value="le">&le;</option>
+            </select>
+            a $
+            <input type="number" name="precio" id="small">
     </form>
 </body>
 </html>

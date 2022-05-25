@@ -229,5 +229,70 @@ elseif ($code==4){
     mysqli_close($link);
     echo ("<br>");
 }
+elseif ($code==5){
+    $num=$_REQUEST["precio"];
+    $operador=$_REQUEST["operador"];
+    if ($operador=="eq"){
+        include "conexion.php";
+        mysqli_select_db ($link, "TiendaInformatica") or die ("No encuentro la base de datos");
+        $sql="SELECT COUNT(*) AS Contador FROM articulos Where Precio = $num";
+        $tabla=mysqli_query($link,$sql) or die ("ERROR");
+        $fila=mysqli_fetch_array($tabla);
+        echo("<hr>");
+        echo ("La cantidad de articulos con el precio igual a ".$num." es ");
+        echo ($fila["Contador"]);
+        mysqli_close($link);
+        echo ("<br>");
+    }
+    elseif ($operador=="gt"){
+        include "conexion.php";
+        mysqli_select_db ($link, "TiendaInformatica") or die ("No encuentro la base de datos");
+        $sql="SELECT COUNT(*) AS Contador FROM articulos Where Precio > $num";
+        $tabla=mysqli_query($link,$sql) or die ("ERROR");
+        $fila=mysqli_fetch_array($tabla);
+        echo("<hr>");
+        echo ("La cantidad de articulos con el precio mayor a ".$num." es ");
+        echo ($fila["Contador"]);
+        mysqli_close($link);
+        echo ("<br>");
+    }
+    elseif ($operador=="ge"){
+        include "conexion.php";
+        mysqli_select_db ($link, "TiendaInformatica") or die ("No encuentro la base de datos");
+        $sql="SELECT COUNT(*) AS Contador FROM articulos Where Precio >= $num";
+        $tabla=mysqli_query($link,$sql) or die ("ERROR");
+        $fila=mysqli_fetch_array($tabla);
+        echo("<hr>");
+        echo ("La cantidad de articulos con el precio mayor o igual a ".$num." es ");
+        echo ($fila["Contador"]);
+        mysqli_close($link);
+        echo ("<br>");
+    }
+    elseif ($operador=="lt"){
+        include "conexion.php";
+        mysqli_select_db ($link, "TiendaInformatica") or die ("No encuentro la base de datos");
+        $sql="SELECT COUNT(*) AS Contador FROM articulos Where Precio < $num";
+        $tabla=mysqli_query($link,$sql) or die ("ERROR");
+        $fila=mysqli_fetch_array($tabla);
+        echo("<hr>");
+        echo ("La cantidad de articulos con el precio menor a ".$num." es ");
+        echo ($fila["Contador"]);
+        mysqli_close($link);
+        echo ("<br>");
+    }
+        elseif ($operador=="le"){
+            include "conexion.php";
+            mysqli_select_db ($link, "TiendaInformatica") or die ("No encuentro la base de datos");
+            $sql="SELECT COUNT(*) AS Contador FROM articulos Where Precio <= $num";
+            $tabla=mysqli_query($link,$sql) or die ("ERROR");
+            $fila=mysqli_fetch_array($tabla);
+            echo("<hr>");
+            echo ("La cantidad de articulos con el precio menor o igual a ".$num." es ");
+            echo ($fila["Contador"]);
+            mysqli_close($link);
+            echo ("<br>");
+        }
+    
+}
 
 ?>
