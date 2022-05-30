@@ -49,6 +49,32 @@ if ($code==1){
     echo("</table>");
     mysqli_close($link);
 }
-
+elseif ($code==2) {
+    include "conexion.php";
+    mysqli_select_db ($link, "TiendaInformatica") or die ("No encuentro la base de datos");
+    $sql="SELECT articulos.Nombre as NombreArt, fabricantes.Nombre as NombreFab
+    FROM articulos,fabricantes WHERE articulos.codigoFab=fabricantes.codigoFab";
+    $tabla=mysqli_query($link,$sql) or die ("ERROR");
+    $cantfilas=mysqli_num_rows($tabla) or die ("ERROR");
+    echo("<hr>");
+    echo("<table>");
+        for ($z=0;$z<=$cantfilas;$z++){ 
+        if ($z==0){
+            echo("<tr class='title'>
+            <td>Articulo</td>
+            <td>Fabricante</td>
+            </tr>");
+        }
+        else{
+            $fila=mysqli_fetch_array($tabla);
+            echo("<tr>
+            <td>".$fila["NombreArt"]."</td>
+            <td>".$fila["NombreFab"]."</td>
+            </tr>");
+        }
+        }
+        echo("</table>");
+        mysqli_close($link);
+}
 
 ?>
