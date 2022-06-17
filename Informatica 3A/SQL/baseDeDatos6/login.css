@@ -1,0 +1,114 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  background-color: #293038;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  color: gray;
+}
+
+img.twtLogo {
+  width: 58px;
+  height: 48px;
+}
+
+img#small{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+h1{
+  color: white;
+}
+
+h5{
+  color: gray;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+    display: grid;
+    background-color: #000000;
+    border-radius: 15px;
+    height: 650px;
+    width: 600px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 100px 50px auto 50px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "t t t t t t t t t t t t"
+    "c c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+.header {
+  grid-area: h;
+  margin-top: 20px;
+}
+.title {
+  margin-top: 20px;
+  grid-area: t;
+}
+
+.form {
+  grid-area: c;
+}
+
+.register {
+  grid-area: f;
+  margin-bottom: 30px;
+}
+
+input:focus {
+    outline: none;
+    border-style: solid;
+    border: 3px #1DA1F2 solid;
+    border-radius: 5px;
+}
+
+input{
+    height: 50px;
+    width: 400px;
+    background-color: #000000;
+    border-style: solid;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: gray;
+    color: white;
+    font-weight: bolder;
+}
+input[type=submit]{
+    margin-left: 25%;
+    background-color: white;
+    color: rgb(90, 90, 90);
+    width: 200px;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+input#file{
+  border: none;
+  display: none;
+}
+
+label {
+  border: 1px gray solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #1DA1F2;
+}

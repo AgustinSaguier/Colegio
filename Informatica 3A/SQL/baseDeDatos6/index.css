@@ -1,0 +1,96 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #AAB8C2;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    color: gray;
+    overflow: hidden; /* Hide scrollbars */
+  }
+
+  .container{
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 15px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 100px auto 700px;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "n n n t t t t t t t p p"
+      "n n n c c c c c c c p p"
+      "n n n c c c c c c c e e";
+  }
+
+  .title{
+    grid-area: t;
+    background-color: white;
+    text-align: left;
+    color: black;
+  }
+
+  .navbar{
+    grid-area: n;
+    background-color: white;
+  }
+
+  .content{
+    grid-area: c;
+    background-color: white;
+  }
+
+  .profile{
+    grid-area: p;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    background: linear-gradient(#1DA1F2 50%, white 50%);
+  }
+
+  .extra{
+    grid-area: e;
+    background-color: white;
+  }
+
+  .title h1{
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+
+  img.small{
+    width: 38px;
+    height: 28px;
+  }
+
+  img.profile{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    border: 4px white solid;
+  }
+
+  span.profile{
+    font-size: large;
+    font-weight: bolder;
+    color: black;
+    background-color: white;
+    margin-top: 30px;
+    background: none;
+  }
+
+  p.number-tweets{
+      align-self: flex-end;
+      text-align: center;
+      color: gray;
+      font-weight: bold;
+      position: relative;
+      left: 30px;
+  }
+
+  span.blue{
+    color: #1DA1F2;
+    font-weight: bolder;  
+  }
