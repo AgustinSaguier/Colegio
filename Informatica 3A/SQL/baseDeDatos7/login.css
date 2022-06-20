@@ -1,0 +1,56 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    font-family: sans-serif; 
+}
+
+.body{
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px gray solid;
+    width: 300px;
+    height: 275px;
+
+}
+
+.text{
+    height: 30px;
+}
+
+input:focus {
+    outline: none;
+    border-style: solid;
+    border: 3px #FEBD69 solid;
+    border-radius: 5px;
+}
+
+.submit{
+    background-color: #FEBD69;
+    border: 1px gray solid;
+    border-radius: 3px;
+    width: 100px;
+}
+
+.register{
+    background-color: rgb(210, 209, 209);
+    border: 1px gray solid;
+    border-radius: 3px;
+    width: 230px;
+    height: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
