@@ -10,11 +10,18 @@
 <body>
     <div class="body">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png" width="100px" height="30px">
-        <form action="" class="form">
+        <form action="login.php" class="form-2" enctype="multipart/form-data" method="post">
+            <input type="hidden" name="hidden-code" value="1">
             <h2>Registrate</h2>
-            <input type="text" name="" id="" class="text" placeholder="Nombre de usuario">
+            <input type="text" name="E-mail" id="" class="text" placeholder="E-mail">
             <br><br>
-            <input type="password" name="" id="" class="text" placeholder="Contraseña">
+            <input type="text" name="Username" id="" class="text" placeholder="Nombre de usuario">
+            <br><br>
+            <input type="password" name="Password" id="" class="text" placeholder="Contraseña">
+            <br><br>
+            <label for="file"><h5>Profile Picture</h5><img src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png" id="small">
+            <input type="file" name="file" id="file">
+            </label>
             <br><br>
             <input type="submit" value="Continuar" class="submit">
         </form>

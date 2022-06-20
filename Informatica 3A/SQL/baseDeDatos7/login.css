@@ -15,6 +15,11 @@ html,body {
 
 }
 
+h5{
+    color: gray;
+    font-weight: normal;
+}
+
 .form{
     display: flex;
     flex-flow: column;
@@ -26,8 +31,25 @@ html,body {
 
 }
 
+.form-2{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px gray solid;
+    width: 300px;
+    height: 400px;
+
+}
+
 .text{
     height: 30px;
+}
+
+img#small{
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
 }
 
 input:focus {
@@ -35,6 +57,11 @@ input:focus {
     border-style: solid;
     border: 3px #FEBD69 solid;
     border-radius: 5px;
+}
+
+input#file{
+    border: none;
+    display: none;
 }
 
 .submit{
@@ -53,4 +80,16 @@ input:focus {
     text-decoration: none;
     color: black;
     text-align: center;
+}
+
+label {
+    border: 1px gray solid;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    width: 165px;
+    height: 30px;
 }
