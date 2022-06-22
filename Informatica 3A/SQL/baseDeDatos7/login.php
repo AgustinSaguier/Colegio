@@ -58,7 +58,16 @@ if ($Code==1) {
     );
 }
 elseif ($Code==2) {
+
     session_start();
+
+
+    function consoleLog($msg) {
+		echo '<script type="text/javascript">' .
+          'console.log(' . $msg . ');</script>';
+	}
+
+	consoleLog('Hello, console!');
 
     $user=$_REQUEST ['Username'];
     $pass=$_REQUEST['Password'];
@@ -75,7 +84,6 @@ elseif ($Code==2) {
         header ('Location:home.php');
     }
     else{
-        header ('Location:index.html');
         ?>
         <script>
         const elem = document.getElementById('alert');
@@ -83,6 +91,8 @@ elseif ($Code==2) {
         console.log('Hello World')
         </script>
         <?php
+        header ('Location:index.html');
+
     }
 }
 ?>
