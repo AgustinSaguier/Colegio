@@ -94,10 +94,7 @@ label {
     height: 30px;
 }
 
-.hidden {
-   display: none; 
+.alert {
+    border: solid 1px #8E0000;
 }
 
-.alert {
-    display: block;
-}

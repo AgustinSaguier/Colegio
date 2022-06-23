@@ -57,42 +57,4 @@ if ($Code==1) {
         "
     );
 }
-elseif ($Code==2) {
-
-    session_start();
-
-
-    function consoleLog($msg) {
-		echo '<script type="text/javascript">' .
-          'console.log(' . $msg . ');</script>';
-	}
-
-	consoleLog('Hello, console!');
-
-    $user=$_REQUEST ['Username'];
-    $pass=$_REQUEST['Password'];
-
-    $sql="SELECT * FROM Vendedor WHERE Username = '$user' AND Password = '$pass'";
-    $resultado=mysqli_query($link,$sql);
-    $nfilas=mysqli_num_rows ($resultado);
-    $fila=mysqli_fetch_array($resultado);
-    if ($nfilas > 0){
-        $id=$fila['idVendedor'];
-        $name=$fila['Username'];
-        $_SESSION ['idUser'] = $id;
-        $_SESSION ['name'] = $name;
-        header ('Location:home.php');
-    }
-    else{
-        ?>
-        <script>
-        const elem = document.getElementById('alert');
-        elem.classList.add('alert')
-        console.log('Hello World')
-        </script>
-        <?php
-        header ('Location:index.html');
-
-    }
-}
 ?>
