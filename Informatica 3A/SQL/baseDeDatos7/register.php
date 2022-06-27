@@ -52,7 +52,7 @@ if ($Code==1) {
     echo(
         "<script>
             alert ('Account created successfully')
-            window.location.replace('index.html')
+            window.location.replace('index.php')
         </script>
         "
     );

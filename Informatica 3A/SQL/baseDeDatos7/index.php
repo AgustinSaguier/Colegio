@@ -36,7 +36,7 @@ include ('includes/conexion.php');
                             <i class='bi bi-exclamation-triangle'></i>
                             <span class='alert-title'>Se produjo un problema</span>
                             <br><br>
-                            <span class='alert-description'>La contraseña no coincide</span>
+                            <span class='alert-description'>El usuario o la contraseña no coincide</span>
                         </div>
                         ");
                     }
