@@ -14,7 +14,7 @@
         PRIMARY KEY (idVendedor)
     );";
     $tablaArticulos="CREATE TABLE  Articulos (
-        CodigoArticulo int NOT NULL,
+        CodigoArticulo int NOT NULL AUTO_INCREMENT,
         Nombre varchar(255) NOT NULL,
         PrecioCompra int NOT NULL,
         PrecioPublico int NOT NULL,
@@ -25,8 +25,9 @@
     $tablaVentas="CREATE TABLE  Ventas (
         idVenta int NOT NULL AUTO_INCREMENT,
         idVendedor int NOT NULL,
-        Fecha DATE,
+        Fecha DATE DEFAULT CURRENT_TIMESTAMP,
         CodigoArticulo int NOT NULL,
+        Cantidad int NOT NULL,
         Ganancia int NOT NULL,
         PRIMARY KEY (idVenta),
         FOREIGN KEY (idVendedor) REFERENCES Vendedor(idVendedor),
