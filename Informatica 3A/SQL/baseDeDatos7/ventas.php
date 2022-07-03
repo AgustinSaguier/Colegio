@@ -13,14 +13,39 @@ include ('includes/conexion.php');
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $(document).ready(function()){
-        $("#search").keyup(function()){
-            $.ajax({
-                ulr: "ventas.php",
-                
-            })
-        }    
+    function showUser(str) {
+  if (str=="") {
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  }
+
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtHint").innerHTML=this.responseText;
     }
+  }
+  xmlhttp.open("GET","getuser.php?q="+str,true);
+  xmlhttp.send();
+
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtPrice").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","getPrice.php?q="+str,true);
+  xmlhttp.send();
+
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtStock").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","getStock.php?q="+str,true);
+  xmlhttp.send();
+}
 </script>
 <body>
     <nav>
@@ -36,7 +61,7 @@ include ('includes/conexion.php');
     <div class="content2">
         <h1 class="title">Realizar Venta</h1>
         <hr>
-        <form action="">
+        <form action="cargaVentas.php">
             <h3 class="subtitle">Codigo Vendedor</h3>
                 <?php
                 $sql="SELECT * FROM Vendedor";
@@ -44,6 +69,7 @@ include ('includes/conexion.php');
                 $cantfilas=mysqli_num_rows($tabla) or die ("ERROR2");
                 $contador=1;
                 echo("<select name='idVendedor'>");
+                echo("<option value=''>Eliga un codigo</option>");
                 for ($z=0;$z<$cantfilas;$z++){
                     $fila=mysqli_fetch_array($tabla);
                     echo("<option value=".$contador.">".$fila["idVendedor"]."</option>");
@@ -58,7 +84,8 @@ include ('includes/conexion.php');
                 $tabla=mysqli_query($link,$sql) or die ("ERROR");
                 $cantfilas=mysqli_num_rows($tabla) or die ("ERROR");
                 $contador=1;
-                echo("<select name='CodigoArticulo'>");
+                echo("<select name='CodigoArticulo' onchange='showUser(this.value)'>");
+                echo("<option value=''>Eliga un codigo</option>");
                 for ($z=0;$z<$cantfilas;$z++){
                     $fila=mysqli_fetch_array($tabla);
                     echo("<option value=".$contador.">".$fila["CodigoArticulo"]."</option>");
@@ -67,11 +94,13 @@ include ('includes/conexion.php');
                 echo("</select>");
                 ?>
             <h3 class="subtitle">Nombre</h3>
-            
+            <div id="txtHint"></div>
             <h3 class="subtitle">Precio</h3>
-            <input type="text" name="" id="">
-            <h3 class="subtitle">Cantidad</h3>
-            <input type="text" name="" id="">
+            <div id="txtPrice"></div>
+            <h3 class="subtitle">Stock</h3>
+            <div id="txtStock"></div>
+            <h3 class="subtitle">Cantidad a Vender</h3>
+            <input type="number" name="Cantidad" id="">
             <br><br>
             <input type="submit" value="Enviar">
         </form>

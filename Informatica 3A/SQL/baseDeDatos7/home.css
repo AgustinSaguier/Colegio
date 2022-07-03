@@ -75,6 +75,7 @@ h2 {
 
 .table-image {
     max-width: 100%;
+    height: 250px;
 }
 
 .table-text {
@@ -115,4 +116,27 @@ h3.subtitle {
     flex-direction: column;
 }
 
+table,td{
+    padding: 20px;
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
+th {
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+tr.title {
+    background-color: #232F3E;
+}
+
+tr.even {
+    background-color: white;
+}
+
+tr.uneven {
+    background-color: rgb(227, 227, 227);
+}
