@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if (!(isset ($_SESSION["idUser"])))
+    header ("Location:index.php")
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +25,7 @@
         </ul>
     </nav>
     <div class="welcome">
-        <h1>Bienvenido, </h1>
+        <h1>Bienvenido, <?php echo($_SESSION['name']);?></h1>
     </div>
     <div class="content">
         <h2>explorar oportunidades</h2>
