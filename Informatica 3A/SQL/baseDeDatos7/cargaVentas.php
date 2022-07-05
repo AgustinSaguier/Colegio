@@ -28,8 +28,9 @@ if ($Stock>=$Cantidad){
     mysqli_query ($link,$sql);
     $sql = "INSERT INTO Ventas (idVendedor, CodigoArticulo, Cantidad, Ganancia) Values ('$idVendedor','$CodigoArticulo','$Cantidad','$Ganancia')";
     mysqli_query ($link,$sql);
+    header ("ventas.php");
 } else {
-    echo ("Error");
+    echo ("Error no hay stock disponible para la venta");
 }
 
 ?>
