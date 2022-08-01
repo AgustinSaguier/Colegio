@@ -12,25 +12,25 @@
     <div class="navbar">
         <ul class="navbar">
             <li>
-                <a href="#">
+                <a href="../agregar/agregarClientes.html">
                 <i class="bi bi-file-earmark-plus"></i>
                 <span class="nav-item">Agregar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../listar/listarClientes.php">
                 <i class="bi bi-card-list"></i>
                 <span class="nav-item">Listar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../eliminar/eliminarClientes.php">
                 <i class="bi bi-trash"></i>
                 <span class="nav-item">Eliminar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../modificar/modificarClientes.php">
                 <i class="bi bi-pencil-square"></i>
                 <span class="nav-item">Modificar</span>
                 </a>
@@ -44,17 +44,19 @@
     </div>
     <div class="content">
         <ul class="content">
-            <li><a href="agregar1.html">Tabla1</a></li>
-            <li><a href="agregar2.html" class="selected">Tabla2</a></li>
+            <li><a href="agregarClientes.html">Clientes</a></li>
+            <li><a href="agregarProductos.html" class="selected">Productos</a></li>
+            <li><a href="agregarProveedores.html">Proveedores</a></li>
         </ul>
         <div class="container">
-            <form action="">
-                <h3>text</h3>
-                <input type="text" name="" id="">
-                <h3>text</h3>
-                <input type="text" name="" id="">
-                <h3>text</h3>
-                <input type="text" name="" id="">
+            <form action="agregar.php">
+                <input type="hidden" name="code" value="2">
+                <h3>descripcion</h3>
+                <input type="text" name="descripcion" id="">
+                <h3>precio</h3>
+                <input type="text" name="precio" id="">
+                <h3>cantidad</h3>
+                <input type="text" name="cantidad" id="">
                 <br><br><br>
                 <input type="submit" value="Agregar">
             </form>

@@ -1,7 +1,7 @@
 <?php
 $user='agustin';
 $pass='12345678';
-$db='Examen';
+$db='compuparBD';
 $servidor='localhost';
 $link=mysqli_connect($servidor,$user,$pass)
 or die ("ERROR DE CONEXION AL SERVIDOR!!");
