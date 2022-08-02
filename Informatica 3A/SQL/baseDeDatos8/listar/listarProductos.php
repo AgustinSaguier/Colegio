@@ -13,25 +13,25 @@
     <div class="navbar">
         <ul class="navbar">
             <li>
-                <a href="#">
+                <a href="../agregar/agregarClientes.html">
                 <i class="bi bi-file-earmark-plus"></i>
                 <span class="nav-item">Agregar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../listar/listarClientes.php">
                 <i class="bi bi-card-list"></i>
                 <span class="nav-item">Listar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../eliminar/eliminarClientes.php">
                 <i class="bi bi-trash"></i>
                 <span class="nav-item">Eliminar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../modificar/modificarClientes.php">
                 <i class="bi bi-pencil-square"></i>
                 <span class="nav-item">Modificar</span>
                 </a>
@@ -45,12 +45,13 @@
     </div>
     <div class="content">
         <ul class="content">
-            <li><a href="listar1.php" class="selected">Tabla1</a></li>
-            <li><a href="listar2.php">Tabla2</a></li>
+            <li><a href="listarClientes.php">Clientes</a></li>
+            <li><a href="listarProductos.php" class="selected">Productos</a></li>
+            <li><a href="listarProveedores.php">Proveedores</a></li>
         </ul>
         <div class="container">
             <?php 
-                $sql="SELECT * FROM Uno";
+                $sql="SELECT * FROM productos";
                 $tabla=mysqli_query($link,$sql) or die ("ERROR");
                 $cantfilas=mysqli_num_rows($tabla) or die ("ERROR");
                 echo("<table>");
@@ -58,26 +59,29 @@
                 for ($z=0;$z<=$cantfilas;$z++){ 
                 if ($z==0){
                     echo("<tr class='title'>
-                    <th>id</th>
-                    <th>Username</th>
-                    <th>Password</th>
+                    <th>Codigo Producto</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
                     </tr>");
                 }
                 else{
                     if ($contador % 2 == 0){
                         $fila=mysqli_fetch_array($tabla);
                         echo("<tr class='even'>
-                        <td>".$fila["id"]."</td>
-                        <td>".$fila["Username"]."</td>
-                        <td>".$fila["Password"]."</td>
+                        <td>".$fila["codProd"]."</td>
+                        <td>".$fila["descripcion"]."</td>
+                        <td>".$fila["precio"]." $</td>
+                        <td>".$fila["cantidad"]."</td>
                         </tr>");
                     } else {
                         $fila=mysqli_fetch_array($tabla);
                         echo("<tr class='uneven'>
-                        <td>".$fila["id"]."</td>
-                        <td>".$fila["Username"]."</td>
-                        <td>".$fila["Password"]."</td> 
-                         </tr>"); 
+                        <td>".$fila["codProd"]."</td>
+                        <td>".$fila["descripcion"]."</td>
+                        <td>".$fila["precio"]."$</td>
+                        <td>".$fila["cantidad"]."</td>
+                        </tr>"); 
                     }
                 $contador=$contador+1;    
                     }

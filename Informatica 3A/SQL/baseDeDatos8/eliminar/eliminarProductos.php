@@ -1,3 +1,4 @@
+<?php include ("../includes/conexion.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,25 +13,25 @@
     <div class="navbar">
         <ul class="navbar">
             <li>
-                <a href="#">
+                <a href="../agregar/agregarClientes.html">
                 <i class="bi bi-file-earmark-plus"></i>
                 <span class="nav-item">Agregar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../listar/listarClientes.php">
                 <i class="bi bi-card-list"></i>
                 <span class="nav-item">Listar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../eliminar/eliminarClientes.php">
                 <i class="bi bi-trash"></i>
                 <span class="nav-item">Eliminar</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../modificar/modificarClientes.php">
                 <i class="bi bi-pencil-square"></i>
                 <span class="nav-item">Modificar</span>
                 </a>
@@ -44,19 +45,27 @@
     </div>
     <div class="content">
         <ul class="content">
-            <li><a href="agregar1.html" class="selected">Tabla1</a></li>
-            <li><a href="agregar2.html">Tabla2</a></li>
+            <li><a href="eliminarClientes.php">Clientes</a></li>
+            <li><a href="eliminarProductos.php" class="selected">Productos</a></li>
+            <li><a href="eliminarProveedores.php">Proveedores</a></li>
         </ul>
         <div class="container">
-            <form action="">
-                <h3>text</h3>
-                <input type="text" name="" id="">
-                <h3>text</h3>
-                <input type="text" name="" id="">
-                <h3>text</h3>
-                <input type="text" name="" id="">
-                <br><br><br>
-                <input type="submit" value="Agregar">
+            <form action="eliminar.php" method="post">
+                <h3>Ingrese el codigo del producto a eliminar</h3>
+                <input type="hidden" name="code" value="2">
+                <?php
+                $sql="SELECT * FROM Productos";
+                $tabla=mysqli_query($link,$sql) or die ("ERROR");
+                $cantfilas=mysqli_num_rows($tabla) or die ("ERROR2");
+                echo("<select name='select'>");
+                for ($z=0;$z<$cantfilas;$z++){
+                    $fila=mysqli_fetch_array($tabla);
+                    echo("<option value=".$fila["codProd"].">".$fila["codProd"]."</option>");
+                }
+                echo("</select>");
+                ?>
+                <br><br>
+                <input type="submit" value="Eliminar">
             </form>
         </div>
     </div>
