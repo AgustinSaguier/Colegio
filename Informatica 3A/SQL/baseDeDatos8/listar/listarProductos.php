@@ -46,7 +46,7 @@
     <div class="content">
         <ul class="content">
             <li><a href="listarClientes.php">Clientes</a></li>
-            <li><a href="listarProductos.php" class="selected">Prodcutos</a></li>
+            <li><a href="listarProductos.php" class="selected">Productos</a></li>
             <li><a href="listarProveedores.php">Proveedores</a></li>
         </ul>
         <div class="container">
