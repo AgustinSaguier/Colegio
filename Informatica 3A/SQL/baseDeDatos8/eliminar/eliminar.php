@@ -9,11 +9,14 @@ if ($code==1){
 }
 elseif($code==2){
     $select = $_REQUEST["select"];
-    $sql = "DELETE FROM `productos` WHERE `productos`.`codProd` = $select"
+    $sql = "DELETE FROM `productos` WHERE `productos`.`codProd` = $select";
     mysqli_query ($link,$sql);
     header("Location:eliminarProductos.php");
 }
 elseif($code==3){
-
+    $select = $_REQUEST["select"];
+    $sql = "DELETE FROM `proveedores` WHERE `proveedores`.`codProv` = $select";
+    mysqli_query ($link,$sql);
+    header("Location:eliminarProveedores.php");
 }
 ?>

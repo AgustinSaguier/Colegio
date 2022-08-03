@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 html, body{
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     height: 100%;
     margin: 0;
@@ -97,4 +99,11 @@ tr.even {
 
 tr.uneven {
     background-color: rgb(227, 227, 227);
+}
+
+div.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

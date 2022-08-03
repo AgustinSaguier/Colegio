@@ -45,51 +45,34 @@
     </div>
     <div class="content">
         <ul class="content">
-            <li><a href="listarClientes.php">Clientes</a></li>
-            <li><a href="listarProductos.php" class="selected">Productos</a></li>
-            <li><a href="listarProveedores.php">Proveedores</a></li>
+            <li><a href="modificarClientes.php">Clientes</a></li>
+            <li><a href="modificarProductos.php">Productos</a></li>
+            <li><a href="modificarProveedores.php" class="selected">Proveedores</a></li>
         </ul>
         <div class="container">
-            <?php 
-                $sql="SELECT * FROM productos";
+            <form action="modificar.php" method="post">
+            <h3>Ingrese el codigo del proveedor a eliminar</h3>
+                <input type="hidden" name="code" value="3">
+                <?php
+                $sql="SELECT * FROM Proveedores";
                 $tabla=mysqli_query($link,$sql) or die ("ERROR");
-                $cantfilas=mysqli_num_rows($tabla) or die ("ERROR");
-                echo("<table>");
-                $contador=1;
-                for ($z=0;$z<=$cantfilas;$z++){ 
-                if ($z==0){
-                    echo("<tr class='title'>
-                    <th>Codigo Producto</th>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    </tr>");
+                $cantfilas=mysqli_num_rows($tabla) or die ("ERROR2");
+                echo("<select name='select'>");
+                for ($z=0;$z<$cantfilas;$z++){
+                    $fila=mysqli_fetch_array($tabla);
+                    echo("<option value=".$fila["codProv"].">".$fila["codProv"]."</option>");
                 }
-                else{
-                    if ($contador % 2 == 0){
-                        $fila=mysqli_fetch_array($tabla);
-                        echo("<tr class='even'>
-                        <td>".$fila["codProd"]."</td>
-                        <td>".$fila["descripcion"]."</td>
-                        <td>".$fila["precio"]." $</td>
-                        <td>".$fila["cantidad"]."</td>
-                        </tr>");
-                    } else {
-                        $fila=mysqli_fetch_array($tabla);
-                        echo("<tr class='uneven'>
-                        <td>".$fila["codProd"]."</td>
-                        <td>".$fila["descripcion"]."</td>
-                        <td>".$fila["precio"]." $</td>
-                        <td>".$fila["cantidad"]."</td>
-                        </tr>"); 
-                    }
-                $contador=$contador+1;    
-                    }
-                }
-                echo("</table>");
-                mysqli_close($link);
-                ?>    
+                echo("</select>");
+                ?>
+            <h4>Nuevo nombre</h4>
+            <input type="text" name="nombre" id="">
+            <h4>Nueva direccion</h4>
+            <input type="text" name="direccion" id="">
+            <h4>Nuevo telefono</h4>
+            <input type="text" name="telefono" id="">
+            <br><br><br>
+            <input type="submit" value="modificar">
+            </form>
         </div>
     </div>
 </body>
-</html>
