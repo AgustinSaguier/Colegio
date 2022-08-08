@@ -1,6 +1,6 @@
 <?php
-$user='agustin';
-$pass='12345678';
+$user='root';
+$pass='';
 $db='compuparBD';
 $servidor='localhost';
 $link=mysqli_connect($servidor,$user,$pass)
