@@ -1,0 +1,33 @@
+html, body{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+div.content{
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 3rem;
+    padding-top: 0rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.navbar{
+    height: 10%;
+    width: 95%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+div.container{
+    background-color: aqua;
+    height: 60%;
+    width: 40%;
+    align-self: flex-end;
+    margin-top: 10rem;
+}
