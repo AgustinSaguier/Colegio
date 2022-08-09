@@ -30,6 +30,10 @@ nav.nav{
     flex-grow: 1;
 }
 
+span.nav{
+    color: gray;
+}
+
 ul{
     list-style: none;
     display: flex;
@@ -40,12 +44,18 @@ a{
     text-decoration: none;
 }
 
+a.selected{
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 3px;
+}
+
 .push-right{
     margin-left: auto;
 }
 
 div.container{
-    background-color: aqua;
+    background-color: white;
     align-self: flex-end;
     margin-top: 10rem;
     height: 60%;
