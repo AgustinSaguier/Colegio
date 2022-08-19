@@ -15,12 +15,12 @@
             
             <nav class="nav">
                 <ul>
-                    <li><a href="">Ingreso</a></li>
-                    <li><a href="">Carga Colegio</a></li>
-                    <li><a href="">Carga Alumno</a></li>
-                    <li><a href="">Carga Deporte</a></li>
-                    <li><a href="">Carga Inscripcion</a></li>
-                    <li class="push-right"><a href="">Salir</a></li>
+                    <li><a href="ingreso.php">Ingreso</a></li>
+                    <li><a href="cargaColegio.html">Carga Colegio</a></li>
+                    <li><a href="cargaAlumno.php">Carga Alumno</a></li>
+                    <li><a href="cargaDeporte.html">Carga Deporte</a></li>
+                    <li><a href="cargaInscripcion.php">Carga Inscripcion</a></li>
+                    <li id="push-right"><a href="">Salir</a></li>
                 </ul>
             </nav>
         </div>
