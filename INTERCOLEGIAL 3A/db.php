@@ -32,6 +32,10 @@
         FOREIGN KEY (AlumnoCI) REFERENCES Alumno(AlumnoCi),
         FOREIGN KEY (DeporteNombre) REFERENCES Deporte(DeporteNombre)
     );";
+        $tablaUsuario="CREATE TABLE  Usuario (
+        Usuario varchar(255) NOT NULL,
+        Contraseña varchar(255) NOT NULL
+    );";
 
     
     $link=mysqli_connect("localhost","agustin","12345678") or die ("ERROR DE CONEXION AL SERVIDOR!!");
@@ -47,7 +51,9 @@
     echo("<br>Se ha creado la tercera tabla");
     mysqli_query($link,$tablaInscripcion) or die ("<br>ERROR AL EJECUTAR COMANDO SQL 4");
     echo("<br>Se ha creado la cuarta tabla");
-    
+    mysqli_query($link,$tablaUsuario) or die ("<br>ERROR AL EJECUTAR COMANDO SQL 4");
+    echo("<br>Se ha creado la quinta tabla")
+
     mysqli_close($link) or die ("<br>ERROR Al CERRAR BASE DE DATOS");
     echo("<br>Se cerro el la base de datos con exito");
     ?>
