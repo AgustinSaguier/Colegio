@@ -25,6 +25,7 @@ elseif ($code==3){
     $DeporteNombre=$_REQUEST["DeporteNombre"];
     $sql="INSERT INTO Deporte (DeporteNombre) VALUES ('$DeporteNombre')";
     mysqli_query ($link,$sql);
+    header("Location:cargaDeporte.html");
     mysqli_close ($link);  
 }
 elseif ($code==4){
@@ -34,6 +35,7 @@ elseif ($code==4){
     $DeporteNombre=$_REQUEST["DeporteNombre"];
     $sql="INSERT INTO Inscripcion (InscripcionFecha, AlumnoCI, DeporteNombre) VALUES ('$InscripcionFecha','$AlumnoCI','$DeporteNombre')";
     mysqli_query ($link,$sql);
+    header("Location:cargaInscripcion.php");
     mysqli_close ($link);  
 }
 ?>

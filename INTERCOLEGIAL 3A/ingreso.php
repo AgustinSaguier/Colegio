@@ -21,7 +21,7 @@
                     <li><a href="cargaAlumno.php">Carga Alumno</a></li>
                     <li><a href="cargaDeporte.html">Carga Deporte</a></li>
                     <li><a href="cargaInscripcion.php">Carga Inscripcion</a></li>
-                    <li id="push-right"><a href="">Salir</a></li>
+                    <li id="push-right"><a href="index.php">Salir</a></li>
                 </ul>
             </nav>
         </div>
