@@ -19,8 +19,8 @@
                     <li><a href="cargaColegio.html">Carga Colegio</a></li>
                     <li><a href="cargaAlumno.php">Carga Alumno</a></li>
                     <li><a href="cargaDeporte.html">Carga Deporte</a></li>
-                    <li><a href="cargaPartido.php">Carga Partido</a></li>
                     <li><a href="cargaInscripcion.php">Carga Inscripcion</a></li>
+                    <li><a href="cargaPartido.php">Carga Partido</a></li>
                     <li id="push-right"><a href="index.php">Salir</a></li>
                 </ul>
             </nav>
@@ -28,7 +28,7 @@
         <div class="container">
             <form action="carga.php">
                 <input type="hidden" name="code" value="4">
-                <h1>Cargar Tabla Inscripcion</h1>
+                <h1>Cargar Tabla Partido</h1>
                 <h4>Fecha del Partido:</h4>
                 <input type="date" name="PartidoFecha" id="">
                 <h4>Primer Colegio:</h4>

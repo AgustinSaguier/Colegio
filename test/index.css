@@ -107,6 +107,14 @@ h1 {
     width: 230px;
 }
 
+.alert-error-2 {
+    background-color: rgba(255, 255, 255, 0.695);
+    border: solid 1px #8E0000;
+    box-shadow:#00000019 0px 50px 100px -20px, #8e00002c 0px -2px 6px 0px inset;
+    padding: 30px;
+    width: 230px;
+}
+
 .alert-error-title {
     color: red;
     font-size: larger;

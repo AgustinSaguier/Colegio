@@ -16,12 +16,12 @@
             
             <nav class="nav">
                 <ul>
-                <li><a href="ingreso.php">Ingreso</a></li>
+                    <li><a href="ingreso.php">Ingreso</a></li>
                     <li><a href="cargaColegio.html">Carga Colegio</a></li>
                     <li><a href="cargaAlumno.php">Carga Alumno</a></li>
                     <li><a href="cargaDeporte.html">Carga Deporte</a></li>
-                    <li><a href="cargaPartido.php">Carga Partido</a></li>
                     <li><a href="cargaInscripcion.php">Carga Inscripcion</a></li>
+                    <li><a href="cargaPartido.php">Carga Partido</a></li>
                     <li id="push-right"><a href="index.php">Salir</a></li>
                 </ul>
             </nav>
@@ -57,15 +57,18 @@
                     $resultado=mysqli_query($link,$sql);
                     $nfilas=mysqli_num_rows ($resultado);
                     if ($nfilas > 0){
-                        $sql="SELECT AlumnoEntrada AS AlumnoEntrada FROM Alumno WHERE AlumnoCI = '$AlumnoCI'";
-                        $tabla=mysqli_query($link,$sql) or die ("ERROR");
-                        $fila=mysqli_fetch_array($tabla);
-                        $AlumnoEntrada = $fila["AlumnoEntrada"];
-                        if ($AlumnoEntrada >= 1){
+                        $sql="SELECT * FROM Inscripcion WHERE AlumnoCI = '$AlumnoCI' AND DeporteNombre = '$DeporteNombre'";
+                        $resultado=mysqli_query($link,$sql);
+                        $nfilas=mysqli_num_rows ($resultado);
+                        if ($nfilas > 0){
                             $sql="SELECT * FROM Inscripcion WHERE AlumnoCI = '$AlumnoCI' AND DeporteNombre = '$DeporteNombre'";
                             $resultado=mysqli_query($link,$sql);
                             $nfilas=mysqli_num_rows ($resultado);
-                            if ($nfilas > 0){
+                            $sql="SELECT AlumnoEntrada AS AlumnoEntrada FROM Alumno WHERE AlumnoCI = '$AlumnoCI'";
+                            $tabla=mysqli_query($link,$sql) or die ("ERROR");
+                            $fila=mysqli_fetch_array($tabla);
+                            $AlumnoEntrada = $fila["AlumnoEntrada"];
+                            if ($AlumnoEntrada >= 1){
                                 $sql = "SELECT ColegioNombre AS ColegioNombre FROM Alumno WHERE AlumnoCI = $AlumnoCI";
                                 $tabla=mysqli_query($link,$sql) or die ("ERROR");
                                 $fila=mysqli_fetch_array($tabla);
@@ -75,28 +78,30 @@
                                 $fila=mysqli_fetch_array($resultado);
                                 $nfilas=mysqli_num_rows ($resultado);
                                 if ($nfilas > 0){
+                                    $NewEntrada =  $AlumnoEntrada - 1;
+                                    $sql = "UPDATE `Alumno` SET `AlumnoEntrada` = '$NewEntrada' WHERE `Alumno`.`AlumnoCI` = $AlumnoCI";
+                                    mysqli_query ($link,$sql);
                                     echo("
                                     <div class='alert-success'>
                                         <i class='bi bi-exclamation-triangle'></i>
                                         <span class='alert-success-title'>Ingreso Exitoso</span>
                                         <br><br>
                                         <span class='alert-description'>Ingreso aprobado para alumno con CI ".$AlumnoCI."</span>
+                                        <span class='alert-description'>Entradas restantes: ".$NewEntrada."</span>
                                     </div>
                                     ");
-                                    $NewEntrada =  $AlumnoEntrada - 1;
-                                    $sql = "UPDATE `Alumno` SET `AlumnoEntrada` = '$NewEntrada' WHERE `Alumno`.`AlumnoCI` = $AlumnoCI";
-                                    mysqli_query ($link,$sql);
+                                    
                                 }
                                 else{
                                     echo ($errorPartido);
                                 }
                             }
                             else{
-                                echo ($errorModalidad);
+                                echo ($errorEntradas);
                             }
                         }
                         else{
-                            echo ($errorEntradas);
+                            echo ($errorModalidad);
                         }          
                     }
                     else{

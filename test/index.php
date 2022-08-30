@@ -33,7 +33,7 @@
                 <div class="login-form-content-item">
                     <span class="input-title">CONTRASEÑA:</span>
                     <i class="bi bi-key-fill" id="push-right" style="padding: 10px; background-color: rgba(238,238,238,255);"></i>
-                    <input type="text" name="Contraseña" class="login-input" placeholder="Contraseña">
+                    <input type="password" name="Contraseña" class="login-input" placeholder="Contraseña">
                 </div>
                 <br>
                 <div class="login-form-content-item">
@@ -56,7 +56,7 @@
                     else{
                         echo("
                         <br>
-                        <div class='alert-error'>
+                        <div class='alert-error-2'>
                             <i class='bi bi-exclamation-triangle'></i>
                             <span class='alert-error-title'>Se produjo un problema</span>
                             <br><br>
