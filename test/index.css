@@ -7,13 +7,17 @@
 html, body{
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
 }
 
 div.content{
-    background-image: url("img/fondo.jpg");
+    min-height: 100vh;
+    background: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -21,6 +25,7 @@ div.content{
     height: 100%;
     padding: 3rem;
     padding-top: 0rem;
+    gap: 5rem;
 }
 
 div.primary-header{
@@ -28,7 +33,9 @@ div.primary-header{
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    width: 95%;
+    min-width: 80%;
+    max-width: 95%;
+    width: auto;
     padding: 1.5rem;
 }
 
@@ -82,9 +89,8 @@ nav a:hover::before {
 div.container{
     background-color: white;
     align-self: flex-end;
-    margin-top: 10rem;
     padding: 2rem;
-    width: 40%;
+    min-width: 40rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,7 +175,7 @@ h1 {
     padding-bottom: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    background-color: rgba(241, 246, 248, 0.863);
+    background-color: rgba(241, 247, 254, 0.863);
 }
 
 .login-form-content-item {
@@ -201,3 +207,50 @@ input:focus {
     color: white;
 }
 
+@media (max-width: 600px){
+    div.primary-header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: none;
+    }
+
+    ul{
+        padding-left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    div.container {
+        width: auto;
+        min-width: auto;
+        margin-top: 1rem;
+        align-self: center;
+    }
+
+    #push-right{
+        margin: auto;
+    }
+
+
+    .login-form-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        gap: 10px;
+        background-color: rgba(230,237,242,255);
+    }
+    .form-title {
+        font-size: large;
+    }
+    .login-form-content{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}

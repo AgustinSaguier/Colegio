@@ -1,4 +1,9 @@
-<?php include ("includes/conexion.php") ?>
+<?php
+include ("includes/conexion.php"); 
+session_start();
+if (!(isset ($_SESSION["Usuario"])))
+    header ("Location:index.php")   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +21,9 @@
             <nav class="nav">
                 <ul>
                     <li><a href="ingreso.php">Ingreso</a></li>
-                    <li><a href="cargaColegio.html">Carga Colegio</a></li>
+                    <li><a href="cargaColegio.php">Carga Colegio</a></li>
                     <li><a href="cargaAlumno.php">Carga Alumno</a></li>
-                    <li><a href="cargaDeporte.html">Carga Deporte</a></li>
+                    <li><a href="cargaDeporte.php">Carga Deporte</a></li>
                     <li><a href="cargaInscripcion.php">Carga Inscripcion</a></li>
                     <li><a href="cargaPartido.php">Carga Partido</a></li>
                     <li id="push-right"><a href="index.php">Salir</a></li>
