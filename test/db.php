@@ -1,7 +1,7 @@
 <?php
-    $sql="CREATE DATABASE IntercolegialTest";
+    $sql="CREATE DATABASE Intercolegial";
 
-    $connect=mysqli_connect("localhost","agustin","12345678") or die ("ERROR DE CONEXION AL SERVIDOR!!");
+    $connect=mysqli_connect("localhost","root","") or die ("ERROR DE CONEXION AL SERVIDOR!!");
     echo ("Conexion al servidor exitosa");
     mysqli_query($connect,$sql) or die ("<br>ERROR EN EJECUTAR COMANDO SQL");
     echo ("<br>Base de datos creada exitosamente");
@@ -47,10 +47,10 @@
     );";
 
     
-    $link=mysqli_connect("localhost","agustin","12345678") or die ("ERROR DE CONEXION AL SERVIDOR!!");
+    $link=mysqli_connect("localhost","root","") or die ("ERROR DE CONEXION AL SERVIDOR!!");
     echo ("Conexion al servidor exitosa");
     //ESTA FUNCION SIRVE PARA SELECCIONAR LA BASE DE DATOS
-    mysqli_select_db($link,"IntercolegialTest") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
+    mysqli_select_db($link,"Intercolegial") or die ("<br>ERROR AL SELECCIONAR LA BASE DE DATOS");
     echo ("<br>Se selecciono la base de datos con exito");
     mysqli_query($link,$tablaColegio) or die ("<br>ERROR AL EJECUTAR COMANDO SQL 1");
     echo("<br>Se ha creado la primera tabla");

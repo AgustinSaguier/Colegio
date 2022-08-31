@@ -1,7 +1,7 @@
 <?php
 $user='root';
 $pass='';
-$db='intercolegialTest';
+$db='intercolegial';
 $servidor='localhost';
 $link=mysqli_connect($servidor,$user,$pass)
 or die ("ERROR DE CONEXION AL SERVIDOR!!");

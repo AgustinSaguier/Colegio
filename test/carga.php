@@ -5,7 +5,7 @@ if ($code==1){
     $ColegioNombre=$_REQUEST["ColegioNombre"];
     $sql="INSERT INTO Colegio (ColegioNombre) VALUES ('$ColegioNombre')";
     mysqli_query ($link,$sql);
-    header("Location:cargaColegio.html");
+    header("Location:cargaColegio.php");
     mysqli_close ($link);
 }
 
@@ -27,7 +27,7 @@ elseif ($code==3){
     $DeporteNombre=$_REQUEST["DeporteNombre"];
     $sql="INSERT INTO Deporte (DeporteNombre) VALUES ('$DeporteNombre')";
     mysqli_query ($link,$sql);
-    header("Location:cargaDeporte.html");
+    header("Location:cargaDeporte.php");
     mysqli_close ($link);  
 }
 
