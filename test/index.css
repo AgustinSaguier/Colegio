@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+}
+
+div.content{
+    min-height: 100vh;
+    background: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 3rem;
+    padding-top: 0rem;
+    gap: 5rem;
+}
+
+div.primary-header{
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    min-width: 80%;
+    max-width: 95%;
+    width: auto;
+    padding: 1.5rem;
+}
+
+nav.nav{
+    flex-grow: 1;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+}
+
+a.selected{
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 3px;
+}
+
+nav a {
+    opacity: 1;
+    position: relative;
+}
+  
+nav a::before {
+    content: '';
+    display: block;
+    height: 2.5px;
+    background: rgb(25, 25, 125);
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+}
+  
+nav a:hover::before {
+    transform: scale(1,1);
+}
+
+#push-right{
+    margin-left: auto;
+}
+
+div.container{
+    background-color: white;
+    align-self: flex-end;
+    padding: 2rem;
+    min-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(25, 25, 125);
+}
+
+.alert-error {
+    border: solid 1px #8E0000;
+    box-shadow:#00000019 0px 50px 100px -20px, #8e00002c 0px -2px 6px 0px inset;
+    padding: 30px;
+    width: 230px;
+}
+
+.alert-error-2 {
+    background-color: rgba(255, 255, 255, 0.695);
+    border: solid 1px #8E0000;
+    box-shadow:#00000019 0px 50px 100px -20px, #8e00002c 0px -2px 6px 0px inset;
+    padding: 30px;
+    width: 230px;
+}
+
+.alert-error-title {
+    color: red;
+    font-size: larger;
+}
+
+.alert-success {
+    border: solid 1px green;
+    box-shadow:#00000019 0px 50px 100px -20px, #00a9172c 0px -2px 6px 0px inset;
+    padding: 30px;
+    width: 230px;
+}
+
+.alert-success-title {
+    color: green;
+    font-size: larger;
+}
+
+/** Especifico a login */
+
+
+
+.login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 10px;
+    background-color: rgba(230,237,242,255);
+}
+
+.login-form-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: rgba(241, 247, 254, 0.863);
+}
+
+.login-form-content-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-title {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.login-input {
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+    border-style: solid;
+    border: 2px #1DA1F2 solid;
+}
+
+.login-submit {
+    padding: 10px;
+    background-color: rgba(51,122,183,255);
+    border: 1px solid black;
+    color: white;
+}
+
+@media (max-width: 600px){
+    div.primary-header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: none;
+    }
+
+    ul{
+        padding-left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    div.container {
+        width: auto;
+        min-width: auto;
+        margin-top: 1rem;
+        align-self: center;
+    }
+
+    #push-right{
+        margin: auto;
+    }
+
+
+    .login-form-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        gap: 10px;
+        background-color: rgba(230,237,242,255);
+    }
+    .form-title {
+        font-size: large;
+    }
+    .login-form-content{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
