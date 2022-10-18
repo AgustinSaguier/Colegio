@@ -9,3 +9,7 @@ img.addEventListener("dragstart",startMovement)
 function startMovement (){
     console.log("Movement detected")
 }
+
+img.ondragend = function () {
+    console.log("Bye World")
+}
